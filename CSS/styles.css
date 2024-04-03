@@ -1,0 +1,85 @@
+body {
+    font-family: "Bodoni Moda", serif;
+    margin: 0;
+    color: white;
+    background-color: #2b4257;
+}
+
+header {
+    background-color: #091235; /* Your fullscreen image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: left;
+    padding: 50px 20px;
+}
+
+@keyframes button {
+    0% { color: #88a9c3; font-size: 16px; }
+    100% { color: white; font-size: 20px; }
+}
+
+.button {
+    color: #88a9c3;
+    border-radius: 5px;
+    font-size: 25px;
+    transition: all 1s;  /* Add a transition for smooth reversal */
+}
+
+.button:hover {
+    color: white;
+    font-size: 30px;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#loginButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login {
+    font-family: "Bodoni Moda", serif;
+    color: white;
+    font-size: 20px;
+    padding: 3px 25px;
+    background: none;
+    transition: all 1s;
+}
+
+#login:hover {
+    color: white;
+    font-size: 25px;
+}
+
+#register {
+    font-family: "Bodoni Moda", serif;
+    color: white;
+    font-size: 20px;
+    padding: 3px 25px;
+    background: none;
+    transition: all 1s;
+}
+
+#register:hover {
+    color: white;
+    font-size: 25px;
+}
+
+main {
+    padding: 20px;
+    align-content: center;
+    text-align: center;
+}
+
+/* Add styles for navigation, about, menu, gallery, reservations, footer */
