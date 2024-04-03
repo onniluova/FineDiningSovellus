@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: #091235; /* Your fullscreen image */
+    background-color: #091235;
     background-size: cover;
     background-position: center;
     color: white;
@@ -89,6 +89,10 @@ main {
     padding: 20px;
     align-content: center;
     text-align: center;
+}
+
+.about {
+    font-size: 20px;
 }
 
 /* Add styles for navigation, about, menu, gallery, reservations, footer */
