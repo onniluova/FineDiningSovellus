@@ -1,0 +1,16 @@
+body {
+    opacity: 100;
+    transform: translateY(100vh); /* Start the page translated 100% of its height downwards */
+    animation: slideUp 2s ease-in-out forwards;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 100;
+        transform: translateY(100vh);
+    }
+    100% {
+        opacity: 100;
+        transform: translateY(0); /* Slide back to normal position */
+    }
+}

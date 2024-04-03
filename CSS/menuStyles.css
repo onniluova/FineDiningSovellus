@@ -2,18 +2,14 @@ body {
     font-family: "Bodoni Moda", serif;
     margin: 0;
     color: #091235;
-    background-color: antiquewhite;
-    background-image: url("/images/bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: aliceblue;
 }
 
 header {
     background-color: #091235;
     background-size: cover;
     background-position: center;
-    color: antiquewhite;
-    font-size: 35px;
+    color: white;
     text-align: left;
     padding: 50px 20px;
 }
@@ -89,46 +85,23 @@ h1 {
     font-size: 25px;
 }
 
-main {
-    padding: 20px;
-    align-content: center;
+.menu {
+    margin-top: 25px;
+    font-size: 25px;
+    border: 2px solid #091235;
+    border-radius: 5px;
     text-align: center;
 }
 
-#frames {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.about {
+.menu button {
+    font-family: "Bodoni Moda", serif;
     font-size: 20px;
-    border: 2px solid #091235;
-    border-radius: 5px;
+    background: none;
+    transition: all 1s;
 }
 
-.about img {
-    border: 1px solid #091235;
-    width: 400px;
-    border-radius: 5px;
+.menu button:hover {
+    font-family: "Bodoni Moda", serif;
+    font-size: 25px;
+    background: none;
 }
-
-#frame1 {
-    width: 400px;
-    border: 2px solid #091235;
-    border-radius: 5px;
-}
-
-#frame2 {
-    width: 400px;
-    border: 2px solid #091235;
-    border-radius: 5px;
-}
-
-#frame3 {
-    width: 400px;
-    border: 2px solid #091235;
-    border-radius: 5px;
-}
-
-/* Add styles for navigation, about, menu, gallery, reservations, footer */
