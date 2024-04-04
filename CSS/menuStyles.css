@@ -2,14 +2,18 @@ body {
     font-family: "Bodoni Moda", serif;
     margin: 0;
     color: #091235;
-    background-color: aliceblue;
+    background-color: antiquewhite;
+    background-image: url("/images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header {
     background-color: #091235;
     background-size: cover;
     background-position: center;
-    color: white;
+    color: antiquewhite;
+    font-size: 35px;
     text-align: left;
     padding: 50px 20px;
 }
