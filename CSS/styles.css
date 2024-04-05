@@ -103,6 +103,7 @@
         align-items: center;
     }
 
+
     .about {
         text-align: center;
         display: flex;
@@ -123,6 +124,14 @@
         margin-bottom:50px;
     }
 
+    #title h2 {
+        margin-bottom: 0; /* Remove the bottom margin of the h2 element */
+    }
+
+    #title p {
+        margin-top: 0; /* Remove the top margin of the p element */
+    }
+
     .about img {
         width: 300px;
         transition: all 2s;
@@ -138,14 +147,23 @@
         border: 4px solid #091235; /* Add a 5px solid border with color #091235 */
     }
 
+    .tarina {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .parallax:hover .tarina {
+        opacity: 1;
+    }
+
     #lore {
         margin-left: auto;
         margin-right: auto;
         font-size: 30px;
         width: auto;
         height: 200px;
-        margin-top: 0px;
-        margin-bottom: 50px;
+        margin-top: 30px;
+        margin-bottom: 150px;
     }
 
     .parallax {
