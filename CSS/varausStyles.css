@@ -1,0 +1,64 @@
+main {
+    display: block;
+    margin-top: -200px;
+    margin-bottom: 100px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* This makes the main element take up the full viewport height */
+}
+
+#henkiloMaara {
+    font-size: 60px;
+    margin: 0;
+    transition: 1s all;
+}
+
+.pallotStyling {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pallo1, #pallo2, #pallo3, #pallo4, #pallo5, #pallo6 {
+    margin: 5px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #cbbca4;
+    transition: 1s all;
+}
+
+.valittuMaaraBox {
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 40px;
+    transition: 1s all;
+}
+
+#valittuMaara {
+    transition: 1s all;
+}
+
+#henkiloMaaraText {
+    opacity: 0;
+    transition: 1s all;
+}
+
+#seuraava1 {
+    font-family: "Bodoni Moda", serif;
+    color: antiquewhite;
+    background-color: #091235;
+    font-size: 50px;
+    opacity: 0;
+    transition: 1s all;
+    border-radius: 15px;
+    margin-top: 25px;
+    padding: 15px;
+}
+
+#seuraava1:hover {
+    color: whitesmoke;
+    background-color: #09133b;
+    font-size: 55px
+}

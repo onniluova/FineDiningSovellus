@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Our menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Fine Dining</title>
     <link rel="stylesheet" href="/CSS/styles.css">
+    <link rel="stylesheet" href="/CSS/varausStyles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
@@ -15,7 +17,7 @@
         <section class="hero">
             <h1 class="logo">Bijou</h1>
             <a href="index.html" class="button">Etusivu</a>
-            <a href="varaus.html" class="button">Varaa pöytä</a>
+            <a href="menu.html" class="button">Menu</a>
             <a href="about.html" class="button">Meistä</a>
             <div id="loginButtons">
                 <div>
@@ -28,31 +30,29 @@
         </section>
     </header>
 
+    <dialog></dialog>
 
-    #TODO: lisää menun latausnappi, joka lataa menun PDF-tiedostona.
-    <div class="slide-in-content">
-        <section class="menu">
-            <h2>Menu</h2>
-            <button>Download menu</button>
-            <div class="menu-item">
-                <h3>Appetizers</h3>
-                <ul>
-                    <li>Appetizer 1</li>
-                    <li>Appetizer 2</li>
-                    <li>Appetizer 3</li>
-                    <li>Appetizer 4</li>
-                </ul>
-            </div>
-            <div class="menu-item">
-                <h3>Main Course</h3>
-                <ul>
-                    <li>Main Course 1</li>
-                    <li>Main Course 2</li>
-                    <li>Main Course 3</li>
-                    <li>Main Course 4</li>
-                </ul>
-            </div>
-        </section>
-    </div>
+    <main>
+        <h1 id="henkiloMaara">Montako henkilöä olisi tulossa?</h1>
+        <div class="pallotStyling">
+            <div id="pallo1"></div>
+            <div id="pallo2"></div>
+            <div id="pallo3"></div>
+            <div id="pallo4"></div>
+            <div id="pallo5"></div>
+            <div id="pallo6"></div>
+        </div>
+        <div class="valittuMaaraBox">
+            <div id="henkiloMaaraText">Henkilöiden määrä</div>
+            <div id="valittuMaara"></div>
+            <button id="seuraava1">Seuraava</button>
+        </div>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script src="/JS/script.js"></script>
+    <script src="/JS/varaus.js"></script>
 </body>
 </html>

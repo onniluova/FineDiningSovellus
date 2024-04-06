@@ -33,10 +33,11 @@
     }
 
     .button {
-        color: #88a9c3;
+        color: antiquewhite;
         border-radius: 5px;
         font-size: 25px;
         transition: all 1s;  /* Add a transition for smooth reversal */
+        text-decoration: none;
     }
 
     .button:hover {
@@ -61,11 +62,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        color: antiquewhite;
     }
 
     #login {
         font-family: "Bodoni Moda", serif;
-        color: white;
+        color: antiquewhite;
         font-size: 20px;
         padding: 3px 25px;
         background: none;
@@ -79,7 +81,7 @@
 
     #register {
         font-family: "Bodoni Moda", serif;
-        color: white;
+        color: antiquewhite;
         font-size: 20px;
         padding: 3px 25px;
         background: none;
