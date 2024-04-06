@@ -194,3 +194,12 @@
         background-image: url('/Images/restaurant1.jpg'); /* Background image for frame3 */
     }
     /* Add styles for navigation, about, menu, gallery, reservations, footer */
+
+    video {
+        position: absolute;
+        width: 60%;
+        height: 60%;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
