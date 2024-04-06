@@ -1,10 +1,8 @@
 main {
-    display: block;
-    margin-top: -200px;
-    margin-bottom: 100px;
+    margin-top: 150px;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* This makes the main element take up the full viewport height */
+    height: 64vh;
 }
 
 #henkiloMaara {

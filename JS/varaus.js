@@ -18,12 +18,11 @@ function changeOtherBalls(e) {
             const currentBallNumber = parseInt(ball.id.replace('pallo', ''));
             if (currentBallNumber <= hoveredBallNumber) {
                 let currentFontSize = parseInt(window.getComputedStyle(henkilo).fontSize);
-                henkilo.style.fontSize = (currentFontSize + 2) + 'px'; // Add a fixed value to the current font size
+                henkilo.style.fontSize = (currentFontSize + 2) + 'px';
                 ball.style.backgroundColor = '#091235';
                 ball.style.width = '110px';
                 ball.style.height = '110px';
 
-                // Create a text node with the ball number and append it to the ball
                 const ballNumberText = document.createElement('span');
                 ballNumberText.textContent = currentBallNumber.toString();
                 ballNumberText.style.color = '#cbbca4';
