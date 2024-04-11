@@ -99,3 +99,95 @@ balls.forEach(ball => {
     ball.addEventListener('mouseenter', changeOtherBalls);
     ball.addEventListener('mouseleave', resetBalls);
 });
+
+const henkiloMaaraElements = [
+    document.querySelector('#henkiloMaara'),
+    document.querySelector('.pallotStyling'),
+    document.querySelector('.valittuMaaraBox')
+];
+
+seuraavaSivu.addEventListener('click', function() {
+    henkiloMaaraElements.forEach(element => {
+        element.classList.add('fade-out');
+    });
+
+    setTimeout(() => {
+        henkiloMaaraElements.forEach(element => {
+            element.style.display = 'none';
+        });
+
+        const mainText = document.createElement('h1');
+        const datePicker = document.createElement('input');
+        const clock = document.querySelector('.clock');
+
+        const digitalClock = document.createElement('div');
+        digitalClock.id = 'digitalClock';
+
+        const timeSelect = document.createElement('select');
+        timeSelect.id = 'timeSelect';
+
+        for (let i = 18; i <= 22; i += 0.5) {
+            const option = document.createElement('option');
+            const hours = Math.floor(i);
+            const minutes = (i % 1) > 0 ? '30' : '00';
+            option.value = `${hours}:${minutes}`;
+            option.text = `${hours}:${minutes}`;
+            timeSelect.appendChild(option);
+        }
+
+        timeSelect.style.opacity = '0';
+        mainText.textContent = "Valitse päivämäärä.";
+        datePicker.type = 'date';
+        datePicker.style.opacity = '0';
+        mainText.style.opacity = '0';
+        clock.style.opacity = '0';
+        clock.style.display = 'flex';
+
+        const mainElement = document.querySelector('main');
+
+
+        mainElement.appendChild(mainText);
+        mainElement.appendChild(datePicker);
+        mainElement.appendChild(digitalClock);
+        mainElement.appendChild(timeSelect);
+
+        let currentTime = new Date();
+
+        datePicker.addEventListener('change', function() {
+            if (datePicker.value) {
+                timeSelect.style.opacity = '1';
+            } else {
+                timeSelect.style.opacity = '0';
+                digitalClock.textContent = 'Valittu kellonaika: ' + timeSelect.value;
+            }
+        });
+
+        timeSelect.addEventListener('change', function() {
+            digitalClock.textContent = 'Valittu kellonaika:'
+        });
+
+        setTimeout(() => {
+            datePicker.style.opacity = '1';
+            mainText.style.opacity = '1';
+            clock.style.opacity = '1';
+        }, 100);
+    }, 1000);
+});
+
+function setDate() {
+    const now = new Date();
+    const seconds = now.getSeconds();
+    const secondsDegrees = ((seconds / 60) * 360) + 90;
+    document.querySelector('.second-hand').style.transform = `rotate(${secondsDegrees}deg)`;
+
+    const mins = now.getMinutes();
+    const minsDegrees = ((mins / 60) * 360) + ((seconds/60)*6) + 90;
+    document.querySelector('.minute-hand').style.transform = `rotate(${minsDegrees}deg)`;
+
+    const hour = now.getHours();
+    const hourDegrees = ((hour / 12) * 360) + ((mins/60)*30) + 90;
+    document.querySelector('.hour-hand').style.transform = `rotate(${hourDegrees}deg)`;
+}
+
+setInterval(setDate, 1000);
+setDate();

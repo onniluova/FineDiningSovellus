@@ -8,6 +8,15 @@
         background-size: cover;
     }
 
+    body.fade-out {
+        transition: opacity 0.5s ease-out;
+        opacity: 0;
+    }
+
+    body, header, main, footer {
+        transition: all 0.5s ease-in-out;
+    }
+
     header {
         background-color: #091235;
         background-size: cover;
@@ -139,7 +148,7 @@
     }
 
     .about img:hover {
-        width: 500px;
+        width: 400px;
         transition: all 2s;
     }
 

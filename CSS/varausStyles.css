@@ -1,8 +1,29 @@
+.hero {
+    height: 5vh;
+    font-size: 0.6em;
+    z-index: 2;
+}
+
 main {
-    margin-top: 150px;
+    margin-top: 100px;
     justify-content: center;
     align-items: center;
     height: 64vh;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        margin-top: 50px;
+        height: 70vh;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        margin-top: 20px;
+        height: 80vh;
+    }
 }
 
 #henkiloMaara {
@@ -47,7 +68,7 @@ main {
     font-family: "Bodoni Moda", serif;
     color: antiquewhite;
     background-color: #091235;
-    font-size: 50px;
+    font-size: 25px;
     opacity: 0;
     transition: 1s all;
     border-radius: 15px;
@@ -58,5 +79,134 @@ main {
 #seuraava1:hover {
     color: whitesmoke;
     background-color: #09133b;
-    font-size: 55px
+    font-size: 30px
+}
+
+.fade-out {
+    transition: opacity 1s ease-out;
+    opacity: 0;
+}
+
+.fade-in {
+    transition: opacity 1s ease-in;
+    opacity: 1;
+}
+
+input[type="date"] {
+    position: relative;
+    font-family: "Bodoni Moda", serif;
+    width: 400px;
+    height: 40px;
+    border: 2px solid #091235;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 20px;
+    background-color: #cbbca4;
+    color: #091235;
+    transition: all 1s;
+    text-align: center;
+    z-index: 2;
+}
+
+input[type="date"]:hover {
+    font-size: 25px;
+    border-radius: 7px;
+    padding: 8px;
+}
+
+.clock {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1500px;
+    height: 1500px;
+    border: 40px solid #c6b69d;
+    border-radius: 50%;
+    margin: -60px auto;
+    opacity: 0;
+    transition: 1s all;
+    z-index: -1;
+}
+
+.hand {
+    position: absolute;
+    bottom: 50%;
+    width: 50%;
+    height: 9px;
+    background: #c6b69d;
+    transform-origin: right center;
+    transition: all 0.05s;
+    transition-timing-function: steps(1, end);
+}
+
+.hour-hand {
+    height: 20px;
+    width: 40%;
+    right: 50%;
+    border-radius: 100px;
+    transition: all 1s;
+}
+
+.minute-hand {
+    height: 7px;
+    width: 50%;
+    right: 50%;
+    border-radius: 100px;
+    transition: all 1s;
+}
+
+.second-hand {
+    height: 2px;
+    width: 50%;
+    right: 50%;
+    border-radius: 100px;
+    background: #c6b69d;
+    transition: all 0.5s;
+}
+
+main h1 {
+    font-size: 40px;
+    color: #091235;
+    text-align: center;
+    transition: all 1s;
+}
+
+main h1:hover {
+    font-size: 45px;
+    color: #091235;
+    text-align: center;
+}
+
+main div {
+    font-size: 30px;
+    color: #091235;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#digitalClock {
+    font-size: 40px;
+    color: #091235;
+    text-align: center;
+    transition: all 1s;
+}
+
+#timeSelect {
+    font-family: "Bodoni Moda", serif;
+    border-radius: 5px;
+    border-color: #09133b;
+    width: 200px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #c6b69d;
+    color: #09133b;
+    transition: 1s all;
+}
+
+#timeSelect:hover {
+    font-size: 22px;
+    border-radius: 7px;
+    width: 220px;
 }
