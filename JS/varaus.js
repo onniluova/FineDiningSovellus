@@ -145,7 +145,6 @@ seuraavaSivu.addEventListener('click', function() {
 
         const mainElement = document.querySelector('main');
 
-
         mainElement.appendChild(mainText);
         mainElement.appendChild(datePicker);
         mainElement.appendChild(digitalClock);

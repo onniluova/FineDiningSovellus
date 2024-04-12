@@ -1,14 +1,17 @@
 .hero {
+    position: relative;
     height: 5vh;
     font-size: 0.6em;
     z-index: 2;
 }
 
 main {
+    position: relative;
     margin-top: 100px;
     justify-content: center;
     align-items: center;
     height: 64vh;
+    z-index: 2;
 }
 
 @media screen and (max-width: 768px) {
@@ -123,11 +126,11 @@ input[type="date"]:hover {
 .clock {
     display: none;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 1500px;
-    height: 1500px;
+    width: 100vh;
+    height: 100vh;
     border: 40px solid #c6b69d;
     border-radius: 50%;
     margin: -60px auto;
