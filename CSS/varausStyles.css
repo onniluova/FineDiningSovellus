@@ -30,12 +30,14 @@ main {
     font-size: 60px;
     margin: 0;
     transition: 1s all;
+    z-index: 2;
 }
 
 .pallotStyling {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 2;
 }
 
 #pallo1, #pallo2, #pallo3, #pallo4, #pallo5, #pallo6 {
@@ -45,6 +47,7 @@ main {
     border-radius: 50%;
     background-color: #cbbca4;
     transition: 1s all;
+    z-index: 2;
 }
 
 .valittuMaaraBox {
@@ -53,15 +56,18 @@ main {
     margin-top: 10px;
     font-size: 40px;
     transition: 1s all;
+    z-index: 2;
 }
 
 #valittuMaara {
     transition: 1s all;
+    z-index: 2;
 }
 
 #henkiloMaaraText {
     opacity: 0;
     transition: 1s all;
+    z-index: 2;
 }
 
 #seuraava1 {
