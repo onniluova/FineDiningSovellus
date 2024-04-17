@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tee käyttäjä</title>
+    <link rel="stylesheet" href="../CSS/styles.css?v=1.2">
+    <link rel="stylesheet" href="../CSS/signup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+        </nav>
+        <section class="hero">
+            <h1 class="logo">Bijou</h1>
+            <a href="index.html" class="button">Etusivu</a>
+            <a href="varaus.html" class="button">Varaa pöytä</a>
+            <a href="menu.html" class="button">Menu</a>
+            <div id="loginButtons">
+                <div>
+                    <button id="login" >Login</button>
+                </div>
+                <div>
+                    <a href="signup.html" id="register" class="button">Rekisteröidy</a>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <div class="register">
+        <section class="signup">
+            <h2>Kirjaudu</h2>
+            <form action="" method="post">
+                <label for="username">Käyttäjänimi:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Salasana:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Kirjaudu</button>
+                <p>Eikö sinulla ole käyttäjää vielä?</p>
+                <a href="signup.html" class="button" id="loginInForm">Rekisteröi käyttäjä</a>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Bijou</p>
+    </footer>
+    <script src="../JS/fx.js"></script>
+    <script src="../JS/signup.js"></script>
+</body>
+</html>
