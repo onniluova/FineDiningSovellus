@@ -1,0 +1,67 @@
+.register {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25vh;
+    color: #e9dece;
+}
+.register h2 {
+    font-size: 50px;
+    text-align: center;
+    z-index: 2;
+    margin-bottom: 20px;
+}
+
+.signup {
+    width: 400px;
+    max-height: 475px;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: #091235;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 25px;
+}
+
+.signup form label,
+.signup form input,
+.signup form p,
+.signup form button {
+    align-content: center;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.signup form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup p {
+    font-size: 15px;
+}
+
+.signup form button {
+    font-family: "Bodoni Moda", serif;
+    border-color: #e5ded3;
+    color: #e5ded3;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: -5px;
+    font-size: 25px;
+    background-color: rgba(152, 139, 119, 0.07);
+}
+
+#loginInForm {
+    font-family: "Bodoni Moda", serif;
+    border-color: #e5ded3;
+    color: #e5ded3;
+    border-radius: 5px;
+    margin-top: -5px;
+    font-size: 15px;
+    background-color: rgba(152, 139, 119, 0.07);
+}
