@@ -6,16 +6,16 @@
     padding: 25vh;
     color: #e9dece;
 }
+
 .register h2 {
+    margin-top: -25px;
     font-size: 50px;
     text-align: center;
     z-index: 2;
-    margin-bottom: 20px;
 }
 
 .signup {
-    width: 400px;
-    max-height: 475px;
+    max-height: 500px;
     max-width: 700px;
     margin: 0 auto;
     padding: 50px;
@@ -30,6 +30,7 @@
 .signup form p,
 .signup form button {
     align-content: center;
+    box-sizing: border-box;
     display: block;
     margin-bottom: 10px;
 }
@@ -54,6 +55,11 @@
     margin-bottom: -5px;
     font-size: 25px;
     background-color: rgba(152, 139, 119, 0.07);
+    transition: 1s all;
+}
+
+.signup form button:hover {
+    font-size: 27px;
 }
 
 #loginInForm {

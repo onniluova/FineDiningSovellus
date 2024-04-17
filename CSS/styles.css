@@ -56,7 +56,7 @@ body {
         color: antiquewhite;
         border-radius: 5px;
         font-size: 40px;
-        transition: all 1s;  /* Add a transition for smooth reversal */
+        transition: all 1s;
         text-decoration: none;
         z-index: 2;
     }
@@ -171,7 +171,7 @@ body {
     }
 
     .parallax img {
-        border: 4px solid #091235; /* Add a 5px solid border with color #091235 */
+        border: 4px solid #091235;
     }
 
     .tarina {
@@ -200,11 +200,11 @@ body {
         align-items: center;
         flex-direction: column;
         background-attachment: fixed;
-        background-size: cover; /* Ensure entire viewport is covered */
-        background-position: center; /* Center the background */
-        min-height: 600px; /* Ensure content stretches the section */
-        transition: transform 0.5s, background-image 1.2s ease-in-out, opacity 1.2s; /* Transition for transform and opacity */
-        opacity: 1; /* Elements start invisible */
+        background-size: cover;
+        background-position: center;
+        min-height: 600px;
+        transition: transform 0.5s, background-image 1.2s ease-in-out, opacity 1.2s;
+        opacity: 1;
         margin-bottom: 50px;
         z-index: 2;
     }
@@ -214,11 +214,11 @@ body {
     }
 
     #frame2.parallax {
-        background-image: url('/Images/restaurant1.jpg'); /* Background image for frame2 */
+        background-image: url('/Images/restaurant1.jpg');
     }
 
     #frame3.parallax {
-        background-image: url('/Images/restaurant1.jpg'); /* Background image for frame3 */
+        background-image: url('/Images/restaurant1.jpg');
     }
 
     footer  {
