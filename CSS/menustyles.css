@@ -1,4 +1,34 @@
 .menu-item {
     font-size: x-large;
+}
 
+.slide-in-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.menu button {
+  font-family: "Bodoni Moda", serif;
+  color: antiquewhite;
+  background-color: #091235;
+  font-size: 16px;
+  border-radius: 15px;
+  margin-top: 25px;
+  padding: 15px;
+  transition: 1s all;
+}
+
+.menu button:hover {
+  color: whitesmoke;
+  background-color: #09133b;
+  font-size: 18px
 }
