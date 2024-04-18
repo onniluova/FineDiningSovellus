@@ -1,3 +1,9 @@
+html, body {
+    min-height: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
 body {
     font-family: "Bodoni Moda", serif;
     margin: 0;
@@ -5,6 +11,9 @@ body {
     background-color: antiquewhite;
     position: relative;
     opacity: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
     body::before {
@@ -40,6 +49,7 @@ body {
         padding: 50px 20px;
         box-sizing: border-box;
         z-index: 2;
+        grid-row: 1;
     }
 
     .logo {
@@ -123,6 +133,8 @@ body {
         padding: 20px;
         align-content: center;
         text-align: center;
+        flex-grow: 1;
+        grid-row: 2;
     }
 
     #frames {
@@ -222,10 +234,12 @@ body {
     }
 
     footer  {
+        height: 80px;
         background-color: #091235;
         color: antiquewhite;
         text-align: center;
         padding: 1px;
         font-size: 20px;
         z-index: 2;
+        grid-row: 3;
     }
