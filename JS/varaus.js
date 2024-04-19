@@ -47,12 +47,11 @@ function resetBalls() {
         ball.style.width = '100px';
         ball.style.height = '100px';
 
-        // If the ball has a text node (the ball number), remove it
         if (ball.firstChild) {
             ball.removeChild(ball.firstChild);
         }
     });
-    henkilo.style.fontSize = '60px'; // Reset the font size
+    henkilo.style.fontSize = '60px';
 }
 
 function selectNumberOfPeople(ball) {
@@ -71,7 +70,6 @@ function selectNumberOfPeople(ball) {
         henkiloMaara.textContent = currentBallNumber.toString();
         console.log(selectedPeopleAmount);
 
-        // Remove event listeners to lock the styling
         balls.forEach(b => {
             b.removeEventListener('mouseenter', changeOtherBalls);
             b.removeEventListener('mouseleave', resetBalls);
@@ -86,7 +84,6 @@ function selectNumberOfPeople(ball) {
         henkiloMaaraText.style.opacity = '0';
         seuraavaSivu.style.opacity = '0';
 
-        // Add event listeners back
         balls.forEach(b => {
             b.addEventListener('mouseenter', changeOtherBalls);
             b.addEventListener('mouseleave', resetBalls);
@@ -162,7 +159,7 @@ seuraavaSivu.addEventListener('click', function() {
         });
 
         timeSelect.addEventListener('change', function() {
-            digitalClock.textContent = 'Valittu kellonaika:'
+            digitalClock.textContent = 'Kellonaikana:'
         });
 
         setTimeout(() => {

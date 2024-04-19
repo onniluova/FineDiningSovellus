@@ -5,7 +5,7 @@ html, body {
     grid-template-rows: auto 1fr auto;
 }
 body {
-    font-family: "Bodoni Moda", serif;
+  font-family: "Old Standard TT", serif;
     margin: 0;
     color: #091235;
     background-color: antiquewhite;
@@ -53,6 +53,7 @@ body {
     }
 
     .logo {
+        font-family: "Bodoni Moda", serif;
         transition: all 0.5s ease;
         z-index: 2;
     }
@@ -99,7 +100,7 @@ body {
     }
 
     #login {
-        font-family: "Bodoni Moda", serif;
+        font-family: "Old Standard TT", serif;
         color: antiquewhite;
         font-size: 35px;
         padding: 3px 25px;
@@ -115,7 +116,7 @@ body {
     }
 
     #register {
-        font-family: "Bodoni Moda", serif;
+        font-family: "Old Standard TT", serif;
         color: antiquewhite;
         font-size: 35px;
         padding: 3px 25px;
@@ -156,6 +157,7 @@ body {
     }
 
     #title {
+        font-family: "Bodoni Moda", serif;
         color: #091235;
         font-size: 20px;
         transition: all 3s;
