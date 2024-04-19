@@ -27,7 +27,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
     })
       .then(response => response.json())
       .then(data => {
-        console.log('Success:', data);
+        console.log('Onnistui:', data);
+
+        let message = document.createElement('h1');
+        message.id = 'successMessage';
+        message.textContent = 'Käyttäjä luotu';
+        registerForm.appendChild(message);
+
+        setTimeout(() => {
+          message.style.opacity = "1";
+        }, 100);
+
+        setTimeout(() => {
+          window.location.href = 'login.html';
+        }, 2000);
       })
       .catch((error) => {
         console.error('Error:', error);
