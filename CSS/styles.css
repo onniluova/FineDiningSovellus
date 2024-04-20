@@ -44,7 +44,7 @@ body {
         background-size: cover;
         background-position: center;
         color: antiquewhite;
-        font-size: 25px;
+        font-size: 20px;
         text-align: left;
         padding: 50px 20px;
         box-sizing: border-box;
@@ -66,7 +66,7 @@ body {
     .button {
         color: antiquewhite;
         border-radius: 5px;
-        font-size: 40px;
+        font-size: 20px;
         transition: all 1s;
         text-decoration: none;
         z-index: 2;
@@ -74,7 +74,7 @@ body {
 
     .button:hover {
         color: white;
-        font-size: 50px;
+        font-size: 22px;
     }
 
     h1 {
@@ -102,32 +102,33 @@ body {
     #login {
         font-family: "Old Standard TT", serif;
         color: antiquewhite;
-        font-size: 35px;
+        font-size: 15px;
         padding: 3px 25px;
         background: none;
         transition: all 1s;
         border-radius: 20px;
         margin-right: 5px;
+        border: 2px solid antiquewhite;
     }
 
     #login:hover {
         color: white;
-        font-size: 40px;
+        font-size: 17px;
     }
 
     #register {
         font-family: "Old Standard TT", serif;
         color: antiquewhite;
-        font-size: 35px;
+        font-size: 15px;
         padding: 3px 25px;
-        background: none;
+        border: 2px solid antiquewhite;
         transition: all 1s;
         border-radius: 20px;
     }
 
     #register:hover {
         color: white;
-        font-size: 40px;
+        font-size: 17px;
     }
 
     main {

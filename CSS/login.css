@@ -1,0 +1,85 @@
+.login {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25vh;
+  color: #e9dece;
+}
+
+.login h2 {
+  font-family: "Bodoni Moda", serif;
+  margin-top: -25px;
+  font-size: 50px;
+  text-align: center;
+  z-index: 2;
+}
+
+.login-form {
+  max-height: 500px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 50px;
+  border-radius: 10px;
+  background-color: #091235;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 25px;
+}
+
+.login-form form label,
+.login-form form input,
+.login-form form p,
+.login-form form button {
+  align-content: center;
+  box-sizing: border-box;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.login-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form p {
+  font-size: 15px;
+}
+
+.login-form form button {
+  font-family: "Bodoni Moda", serif;
+  border-color: #e5ded3;
+  color: #e5ded3;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: -5px;
+  font-size: 25px;
+  background-color: rgba(152, 139, 119, 0.07);
+  transition: 1s all;
+}
+
+.login-form form button:hover {
+  font-size: 26px;
+  background-color: #050a21;
+}
+
+#loginInForm {
+  font-family: "Bodoni Moda", serif;
+  border-color: #e5ded3;
+  color: #e5ded3;
+  border-radius: 5px;
+  margin-top: -5px;
+  font-size: 15px;
+  background-color: rgba(152, 139, 119, 0.07);
+}
+
+#successMessage {
+  font-family: "Old Standard TT", serif;
+  color: #e5e0e0;
+  font-size: 20px;
+  opacity: 0;
+  text-align: center;
+  transition: all 0.5s;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+}
