@@ -1,4 +1,4 @@
-let loginButton = document.querySelector('.login-form form');
+let loginForm = document.querySelector('.login-form form');
 async function loginUser(event) {
   event.preventDefault();
   let email = document.getElementById('email').value;
@@ -15,10 +15,25 @@ async function loginUser(event) {
   if (response.ok) {
     const user = await response.json();
     console.log("Kirjautuminen onnistui", user);
+
+    let message = document.createElement('h1');
+    message.id = 'successMessage';
+    message.textContent = 'Kirjauduttu sisään';
+    loginForm.appendChild(message);
+
+    setTimeout(() => {
+      message.style.opacity = "1";
+    }, 100);
+
+    setTimeout(() => {
+      window.location.href = 'index.html';
+    }, 2000);
+
   } else {
-    console.log("Login failed with status code: ", response.status);
+    console.log("Status code: ", response.status);
     const responseBody = await response.json();
-    console.log("Response body: ", responseBody);
+    console.log("Response: ", responseBody);
   }
 }
-loginButton.addEventListener('submit', loginUser);
+
+loginForm.addEventListener('submit', loginUser);
