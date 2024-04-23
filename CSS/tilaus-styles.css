@@ -1,0 +1,47 @@
+body {
+  font-family: 'Bodoni Moda', serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.ruoat, .juomat {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.ruoat h1, .juomat h1 {
+  font-size: 2em;
+  color: #333;
+}
+
+.ruoat div, .juomat div {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+button {
+  display: block;
+  width: 200px;
+  height: 40px;
+  margin: 20px auto;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #444;
+}
