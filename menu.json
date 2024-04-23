@@ -1,6 +1,6 @@
 {
     "menu": {
-        "alkuruoka": [
+        "Alkuruoka": [
             {
                 "nimi": "Taimen",
                 "kuvaus": "Kevyesti savustettua taimenta",
@@ -23,7 +23,7 @@
             }
 
         ],
-        "pääruoka": [
+        "Pääruoka": [
             {
                 "nimi": "Grillattu lohi",
                 "hinta": 18.00
@@ -43,7 +43,7 @@
                 "hinta": 18.00
             }
         ],
-        "jälkiruoka": [
+        "Jälkiruoka": [
             {
                 "nimi": "Suklaakakku",
                 "hinta": 6.00
@@ -63,7 +63,7 @@
                 "hinta": 6.00
             }
         ],
-        "juomat": [
+        "Juomat": [
             {
                 "nimi": "Punaviini",
                 "hinta": 7.00,
