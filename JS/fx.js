@@ -56,3 +56,17 @@ window.addEventListener('scroll', function() {
 
     title.style.fontSize = `${newFontSize}px`;
 });
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  setTimeout(() => {
+    const buttons = document.querySelectorAll('.button');
+    const currentURL = new URL(window.location.href).pathname;
+
+    buttons.forEach(button => {
+      const buttonURL = new URL(button.href).pathname;
+      if (buttonURL === currentURL) {
+        button.classList.add('current-page');
+      }
+    });
+  }, 100);
+});
