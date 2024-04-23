@@ -1,0 +1,53 @@
+{
+    "menu": {
+        "alkuruoka": [
+            {
+                "nimi": "Caesar-salaatti",
+                "hinta": 7.50
+            },
+            {
+                "nimi": "Kermainen lohikeitto",
+                "hinta": 8.00
+            }
+
+        ],
+        "pääruoka": [
+            {
+                "nimi": "Grillattu lohi",
+                "hinta": 15.00
+            },
+            {
+                "nimi": "Pippuripihvi",
+                "hinta": 18.00
+            }
+        ],
+        "jälkiruoka": [
+            {
+                "nimi": "Suklaakakku",
+                "hinta": 6.00
+            },
+            {
+                "nimi": "Mansikkajäätelö",
+                "hinta": 5.00
+            }
+        ],
+        "juomat": [
+            {
+                "nimi": "Punaviini",
+                "hinta": 7.00
+            },
+            {
+                "nimi": "Valkoviini",
+                "hinta": 7.00
+            },
+            {
+                "nimi": "Olut",
+                "hinta": 5.00
+            },
+            {
+                "nimi": "Vesi",
+                "hinta": 0.00
+            }
+        ]
+    }
+}
