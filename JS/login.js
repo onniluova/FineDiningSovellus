@@ -16,6 +16,8 @@ async function loginUser(event) {
     const user = await response.json();
     console.log("Kirjautuminen onnistui", user);
 
+    localStorage.setItem('user', JSON.stringify(user));
+
     let message = document.createElement('h1');
     message.id = 'successMessage';
     message.textContent = 'Kirjauduttu sisään';

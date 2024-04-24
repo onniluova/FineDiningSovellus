@@ -167,8 +167,72 @@ seuraavaSivu.addEventListener('click', function() {
             mainText.style.opacity = '1';
             clock.style.opacity = '1';
         }, 100);
+
+      timeSelect.addEventListener('change', function() {
+        digitalClock.textContent = 'Kellonaikana: ' + timeSelect.value;
+
+        const seuraavaSivu2 = document.createElement('button');
+        seuraavaSivu2.textContent = 'Seuraava';
+        seuraavaSivu2.style.opacity = '0';
+        mainElement.appendChild(seuraavaSivu2);
+
+        setTimeout(() => {
+          seuraavaSivu2.style.opacity = '1';
+        }, 100);
+
+        seuraavaSivu2.addEventListener('click', function() {
+          const user = JSON.parse(localStorage.getItem('user'));
+
+          const reservationDetails = {
+            userId: user.id,
+            reservationDate: datePicker.value,
+            reservationTime: timeSelect.value,
+            customerCount: selectedPeopleAmount
+          };
+
+          fetch('https:///reservations', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(reservationDetails),
+          })
+            .then(response => response.json())
+            .then(data => {
+              console.log('Success:', data);
+
+              // Remove the digital clock, main text, time select, and date picker elements
+              mainText.remove();
+              datePicker.remove();
+              digitalClock.remove();
+              timeSelect.remove();
+
+              // Create and display a summary of reservation details
+              const summary = document.createElement('div');
+              summary.textContent = `Reservation Details: \nUser ID: ${reservationDetails.userId} \nReservation Date: ${reservationDetails.reservationDate} \nReservation Time: ${reservationDetails.reservationTime} \nCustomer Count: ${reservationDetails.customerCount}`;
+              mainElement.appendChild(summary);
+            })
+            .catch((error) => {
+              console.error('Error:', error);
+            });
+        });
+      });
     }, 1000);
 });
+fetch('https:///reservations', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(reservationDetails),
+})
+  .then(response => response.json())
+  .then(data => {
+    console.log('Success:', data);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
 
 function setDate() {
     const now = new Date();
