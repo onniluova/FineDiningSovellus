@@ -184,55 +184,57 @@ seuraavaSivu.addEventListener('click', function() {
           const user = JSON.parse(localStorage.getItem('user'));
 
           const reservationDetails = {
-            userId: user.id,
             reservationDate: datePicker.value,
             reservationTime: timeSelect.value,
-            customerCount: selectedPeopleAmount
+            customer_count: selectedPeopleAmount
           };
 
-          fetch('https:///reservations', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(reservationDetails),
-          })
-            .then(response => response.json())
-            .then(data => {
-              console.log('Success:', data);
+          const fetchButton = document.createElement('button');
+          fetchButton.textContent = 'Lähetä';
+          fetchButton.style.opacity = '0';
+          digitalClock.style.display = "none";
+          timeSelect.style.display = "none";
+          datePicker.style.display = "none";
+          mainText.style.display = "none";
+          clock.style.display = "none";
 
-              // Remove the digital clock, main text, time select, and date picker elements
-              mainText.remove();
-              datePicker.remove();
-              digitalClock.remove();
-              timeSelect.remove();
 
-              // Create and display a summary of reservation details
-              const summary = document.createElement('div');
-              summary.textContent = `Reservation Details: \nUser ID: ${reservationDetails.userId} \nReservation Date: ${reservationDetails.reservationDate} \nReservation Time: ${reservationDetails.reservationTime} \nCustomer Count: ${reservationDetails.customerCount}`;
-              mainElement.appendChild(summary);
+          mainElement.appendChild(fetchButton);
+
+          const summary = document.createElement('div');
+          summary.textContent = `Varauksen tiedot: \nPäivämäärä: ${reservationDetails.reservationDate} \nAsiakkaiden määrä: ${reservationDetails.customer_count}`;
+          mainElement.appendChild(summary);
+
+          seuraavaSivu2.remove();
+
+          setTimeout(() => {
+            fetchButton.style.opacity = '1';
+          }, 100);
+
+          fetchButton.addEventListener('click', function() {
+            fetch('http://127.0.0.1:3000/reservations', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(reservationDetails),
             })
-            .catch((error) => {
-              console.error('Error:', error);
-            });
+              .then(response => response.json())
+              .then(data => {
+                if (data.message) {
+                  console.log(data.message);
+                } else {
+                  console.error('Error:', data.error);
+                }
+              })
+              .catch((error) => {
+                console.error('Error:', error);
+              });
+          });
         });
       });
     }, 1000);
 });
-fetch('https:///reservations', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify(reservationDetails),
-})
-  .then(response => response.json())
-  .then(data => {
-    console.log('Success:', data);
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-  });
 
 function setDate() {
     const now = new Date();
