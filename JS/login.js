@@ -4,7 +4,7 @@ async function loginUser(event) {
   let email = document.getElementById('email').value;
   let password = document.getElementById('password').value;
 
-  const response = await fetch('http://127.0.0.1:3001/login', {
+  const response = await fetch('http://127.0.0.1:3000/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -16,7 +16,8 @@ async function loginUser(event) {
     const user = await response.json();
     console.log("Kirjautuminen onnistui", user);
 
-    localStorage.setItem('user', JSON.stringify(user));
+    localStorage.setItem('user', JSON.stringify(user.user.user));
+    localStorage.setItem('asiakas_id', user.user.user.asiakas_id);
 
     let message = document.createElement('h1');
     message.id = 'successMessage';
@@ -30,7 +31,6 @@ async function loginUser(event) {
     setTimeout(() => {
       window.location.href = 'index.html';
     }, 2000);
-
   } else {
     console.log("Status code: ", response.status);
     const responseBody = await response.json();
