@@ -28,7 +28,7 @@ if (user) {
 
   document.getElementById('viewReservationsButton').addEventListener('click', async () => {
     let asiakas_id = localStorage.getItem('asiakas_id');
-    const response = await fetch(`http://127.0.0.1:3001/reservations/${asiakas_id}`);
+    const response = await fetch(`http://127.0.0.1:3000/reservations/${asiakas_id}`);
     if (response.ok) {
       const reservations = await response.json();
       console.log(reservations);

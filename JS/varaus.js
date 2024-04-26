@@ -184,9 +184,10 @@ seuraavaSivu.addEventListener('click', function() {
           const user = JSON.parse(localStorage.getItem('user'));
 
           const reservationDetails = {
-            reservationDate: datePicker.value,
-            reservationTime: timeSelect.value,
-            customer_count: selectedPeopleAmount
+            asiakas_id: user.asiakas_id,
+            customer_count: selectedPeopleAmount,
+            date: datePicker.value,
+            ajankohta: timeSelect.value
           };
 
           const fetchButton = document.createElement('button');
@@ -202,7 +203,7 @@ seuraavaSivu.addEventListener('click', function() {
           mainElement.appendChild(fetchButton);
 
           const summary = document.createElement('div');
-          summary.textContent = `Varauksen tiedot: \nPäivämäärä: ${reservationDetails.reservationDate} \nAsiakkaiden määrä: ${reservationDetails.customer_count}`;
+          summary.textContent = `Varauksen tiedot: \nPäivämäärä: ${reservationDetails.date} \nAsiakkaiden määrä: ${reservationDetails.customer_count}`;
           mainElement.appendChild(summary);
 
           seuraavaSivu2.remove();
