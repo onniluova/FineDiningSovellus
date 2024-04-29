@@ -252,3 +252,87 @@ body {
   color: #7ba0d9;
   text-decoration: underline;
 }
+
+#reservationsDialog {
+  font-family: "Old Standard TT", serif;
+  background-color: antiquewhite;
+  border-radius: 5px;
+  color: #091235;
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#reservationsDialog h2 {
+  font-family: "Bodoni Moda", serif;
+  margin-top: 0;
+}
+
+#reservationsDialog div {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+#reservationsDialog button {
+  font-family: "Old Standard TT", serif;
+  background-color: #091235;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#reservationsDialog button:hover {
+  background-color: #1e2d63;
+}
+
+#closeDialogButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+#userBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: antiquewhite;
+  border-radius: 5px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#userBox p {
+  margin-right: 10px;
+  color: #333;
+}
+
+#userBox button {
+  margin-left: 10px;
+}
+
+#logoutButton, #viewReservationsButton {
+  font-family: "Old Standard TT", serif;
+  background-color: #e6d7c3;
+  color: #091235;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#logoutButton:hover, #viewReservationsButton:hover {
+  background-color: #d0c0ac;
+}

@@ -10,9 +10,9 @@ if (user) {
   let userBox = document.createElement('div');
   userBox.id = 'userBox';
   userBox.innerHTML = `
-    <p>Email: ${user.email}</p>
-    <button id="logoutButton">Logout</button>
-    <button id="viewReservationsButton">View Reservations</button>
+    <p>${user.email}</p>
+    <button id="logoutButton">Kirjaudu ulos</button>
+    <button id="viewReservationsButton">Varaukset</button>
   `;
 
   let heroSection = document.querySelector('.hero');
@@ -32,7 +32,51 @@ if (user) {
     if (response.ok) {
       const reservations = await response.json();
       console.log(reservations);
-      // Display reservations to the user...
+      reservations.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+      if (reservations.length === 0) {
+        alert("No reservations found");
+        return;
+      }
+
+      let dialog = document.createElement('dialog');
+      dialog.id = 'reservationsDialog';
+      dialog.innerHTML = '<button id="closeDialogButton">×</button>';
+
+      reservations.forEach(reservation => {
+        let reservationDiv = document.createElement('div');
+        reservationDiv.innerHTML = `
+                <h2>Varaus ID: ${reservation.reservation_id}</h2>
+                <p>Asiakasmäärä: ${reservation.customer_count}</p>
+                <p>Päivämäärä: ${new Date(reservation.date).toLocaleDateString()}</p>
+                <p>Aika: ${reservation.ajankohta}</p>
+                <p>Asiakkaan ID: ${reservation.asiakas_id}</p>
+                <button class="cancelButton" data-id="${reservation.reservation_id}">Peru</button>
+                <hr>
+            `;
+        dialog.appendChild(reservationDiv);
+      });
+      document.body.appendChild(dialog);
+      dialog.showModal();
+
+      document.getElementById('closeDialogButton').addEventListener('click', () => {
+        dialog.close();
+      });
+
+      document.querySelectorAll('.cancelButton').forEach(button => {
+        button.addEventListener('click', async (event) => {
+          const reservationId = event.target.getAttribute('data-id');
+          const response = await fetch(`http://127.0.0.1:3000/reservations/${reservationId}`, {
+            method: 'DELETE'
+          });
+          if (response.ok) {
+            console.log(`Reservation ${reservationId} cancelled`);
+            event.target.parentElement.remove();
+          } else {
+            console.log("Error cancelling reservation: ", response.status);
+          }
+        });
+      });
     } else {
       console.log("Error fetching reservations: ", response.status);
     }
