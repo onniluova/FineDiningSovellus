@@ -173,12 +173,15 @@ seuraavaSivu.addEventListener('click', function() {
 
         const seuraavaSivu2 = document.createElement('button');
         seuraavaSivu2.textContent = 'Seuraava';
+        seuraavaSivu2.id = 'seuraava2';
         seuraavaSivu2.style.opacity = '0';
-        mainElement.appendChild(seuraavaSivu2);
 
         setTimeout(() => {
           seuraavaSivu2.style.opacity = '1';
         }, 100);
+
+        mainElement.appendChild(timeSelect);
+        mainElement.appendChild(seuraavaSivu2);
 
         seuraavaSivu2.addEventListener('click', function() {
           const user = JSON.parse(localStorage.getItem('user'));

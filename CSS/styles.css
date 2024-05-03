@@ -61,7 +61,7 @@ body {
 
     .logo:hover {
         color: white;
-        font-size: 3.5em;
+        transform: scale(1.1);
     }
 
     .button {
@@ -112,9 +112,10 @@ body {
         border: 2px solid antiquewhite;
     }
 
-    #login:hover {
+    #login:hover, #register:hover {
         color: white;
-        font-size: 17px;
+        border-color: white;
+        transform: scale(1.1);
     }
 
     #register {
@@ -125,11 +126,6 @@ body {
         border: 2px solid antiquewhite;
         transition: all 1s;
         border-radius: 20px;
-    }
-
-    #register:hover {
-        color: white;
-        font-size: 17px;
     }
 
     main {

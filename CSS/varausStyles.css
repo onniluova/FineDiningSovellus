@@ -80,7 +80,6 @@ main {
 #seuraava1:hover {
     color: whitesmoke;
     background-color: #09133b;
-    font-size: 30px
 }
 
 .fade-out {
@@ -107,12 +106,6 @@ input[type="date"] {
     transition: all 1s;
     text-align: center;
     z-index: 2;
-}
-
-input[type="date"]:hover {
-    font-size: 25px;
-    border-radius: 7px;
-    padding: 8px;
 }
 
 .clock {
@@ -175,8 +168,7 @@ main h1 {
 }
 
 main h1:hover {
-    font-size: 45px;
-    color: #091235;
+    color: #081134;
     text-align: center;
 }
 
@@ -206,8 +198,20 @@ main div {
     transition: 1s all;
 }
 
-#timeSelect:hover {
-    font-size: 22px;
-    border-radius: 7px;
-    width: 220px;
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+#seuraava2 {
+    font-family: "Bodoni Moda", serif;
+    color: antiquewhite;
+    background-color: #091235;
+    font-size: 25px;
+    opacity: 0;
+    transition: 1s all;
+    border-radius: 15px;
+    margin-top: 25px;
+    padding: 15px;
 }
