@@ -36,51 +36,18 @@ fetch('../menu.json')
     }
 
     const orderButton = document.createElement('button');
-    orderButton.textContent = 'Tilaa';
+    orderButton.textContent = 'Ostoskoriin';
+
     orderButton.addEventListener('click', () => {
       const alkuruokaSelected = document.querySelectorAll('.alkuruoka input[type="checkbox"]:checked');
       const paaruokaSelected = document.querySelectorAll('.pääruoka input[type="checkbox"]:checked');
       const juomatSelected = document.querySelectorAll('.juomat input[type="checkbox"]:checked');
 
-      console.log('Alkuruoka selected:', alkuruokaSelected.length);
-      console.log('Pääruoka selected:', paaruokaSelected.length);
-      console.log('Juomat selected:', juomatSelected.length);
+      const selectedItems = [...alkuruokaSelected, ...paaruokaSelected, ...juomatSelected].map(item => item.value);
 
-      if ((alkuruokaSelected.length > 0 || paaruokaSelected.length > 0) && juomatSelected.length > 0) {
-        const date = new Date();
-        const formattedDate = date.toISOString().slice(0,10);
+      sessionStorage.setItem('selectedItems', JSON.stringify(selectedItems));
 
-        const asiakas_id = localStorage.getItem('asiakas_id');
-        const newOrder = {
-          asiakas_id: asiakas_id,
-          tila: 0,
-          paivamaara: formattedDate
-        };
-
-        fetch('http://localhost:3000/orders', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(newOrder)
-        })
-          .then(response => response.json())
-          .then(data => {
-            console.log('Server response:', data);
-            if (data.message === 'Tilaus tehty onnistuneesti.') {
-              document.getElementById('orderDetails').textContent = JSON.stringify(newOrder);
-              document.getElementById('orderModal').style.display = 'block';
-            } else {
-              alert('Tilauksen tekemisessä ilmeni virhe.');
-            }
-            document.getElementById('homeButton').addEventListener('click', () => {
-              window.location.href = '../HTML/index.html';
-            });
-          })
-          .catch(error => console.error('Error:', error));
-      } else {
-        alert('Valitse ruoka ja juoma.');
-      }
+      window.location.href = 'ostoskori.html';
     });
 
     container.appendChild(orderButton);

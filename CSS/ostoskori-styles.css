@@ -1,0 +1,66 @@
+body {
+  font-family: "Old Standard TT", serif;
+  color: #091235;
+  background-color: antiquewhite;
+}
+
+main {
+  padding: 20px;
+  align-content: center;
+  text-align: center;
+}
+
+main p button {
+  background-color: #091235;
+  color: #fff;
+  border: none;
+  padding: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+main p button {
+  background-color: #091235;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+main p button:hover {
+  background-color: #1e2d63;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #091235;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1e2d63;
+}
+
+#orderSummary {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  font-size: 20px;
+}
+
+.order-success {
+  font-family: "Old Standard TT", serif;
+  color: #1e2d63;
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 20px;
+}
