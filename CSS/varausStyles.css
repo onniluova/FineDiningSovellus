@@ -198,6 +198,12 @@ main div {
     transition: 1s all;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 footer {
   position: fixed;
   bottom: 0;
@@ -214,4 +220,21 @@ footer {
     border-radius: 15px;
     margin-top: 25px;
     padding: 15px;
+}
+
+.fade-out {
+  transition: opacity 1s ease-out;
+  opacity: 0;
+}
+
+#fetchButton {
+  font-family: "Bodoni Moda", serif;
+  color: antiquewhite;
+  background-color: #091235;
+  font-size: 25px;
+  opacity: 0;
+  transition: 1s all;
+  border-radius: 15px;
+  margin-top: 25px;
+  padding: 15px;
 }

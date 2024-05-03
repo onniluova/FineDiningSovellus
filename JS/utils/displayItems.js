@@ -1,6 +1,12 @@
-fetch('../menu.json')
-  .then(response => response.json())
+fetch('http://localhost:3000/menu') // replace with your server's address
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
   .then(data => {
+    console.log(data);
     const container = document.querySelector('.container');
 
     for (const category in data.menu) {
@@ -42,8 +48,9 @@ fetch('../menu.json')
       const alkuruokaSelected = document.querySelectorAll('.alkuruoka input[type="checkbox"]:checked');
       const paaruokaSelected = document.querySelectorAll('.pääruoka input[type="checkbox"]:checked');
       const juomatSelected = document.querySelectorAll('.juomat input[type="checkbox"]:checked');
+      const jalkiruokaSelected = document.querySelectorAll('.jälkiruoka input[type="checkbox"]:checked');
 
-      const selectedItems = [...alkuruokaSelected, ...paaruokaSelected, ...juomatSelected].map(item => item.value);
+      const selectedItems = [...alkuruokaSelected, ...paaruokaSelected, ...juomatSelected, ...jalkiruokaSelected].map(item => item.value);
 
       sessionStorage.setItem('selectedItems', JSON.stringify(selectedItems));
 
