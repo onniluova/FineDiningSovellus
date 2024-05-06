@@ -149,14 +149,17 @@ seuraavaSivu.addEventListener('click', function() {
 
         let currentTime = new Date();
 
-        datePicker.addEventListener('change', function() {
-            if (datePicker.value) {
-                timeSelect.style.opacity = '1';
-            } else {
-                timeSelect.style.opacity = '0';
-                digitalClock.textContent = 'Valittu kellonaika: ' + timeSelect.value;
-            }
-        });
+      datePicker.addEventListener('change', function() {
+        if (datePicker.value) {
+          timeSelect.style.opacity = '1';
+          digitalClock.textContent = 'Kellonaikana:';
+          digitalClock.style.opacity = '1';
+        } else {
+          timeSelect.style.opacity = '0';
+          digitalClock.textContent = '';
+          digitalClock.style.opacity = '0';
+        }
+      });
 
         timeSelect.addEventListener('change', function() {
             digitalClock.textContent = 'Kellonaikana:'
@@ -173,12 +176,15 @@ seuraavaSivu.addEventListener('click', function() {
 
         const seuraavaSivu2 = document.createElement('button');
         seuraavaSivu2.textContent = 'Seuraava';
+        seuraavaSivu2.id = 'seuraava2';
         seuraavaSivu2.style.opacity = '0';
-        mainElement.appendChild(seuraavaSivu2);
 
         setTimeout(() => {
           seuraavaSivu2.style.opacity = '1';
         }, 100);
+
+        mainElement.appendChild(timeSelect);
+        mainElement.appendChild(seuraavaSivu2);
 
         seuraavaSivu2.addEventListener('click', function() {
           const user = JSON.parse(localStorage.getItem('user'));
@@ -192,13 +198,13 @@ seuraavaSivu.addEventListener('click', function() {
 
           const fetchButton = document.createElement('button');
           fetchButton.textContent = 'Lähetä';
+          fetchButton.id = 'fetchButton';
           fetchButton.style.opacity = '0';
           digitalClock.style.display = "none";
           timeSelect.style.display = "none";
           datePicker.style.display = "none";
           mainText.style.display = "none";
           clock.style.display = "none";
-
 
           mainElement.appendChild(fetchButton);
 
@@ -207,6 +213,7 @@ seuraavaSivu.addEventListener('click', function() {
           mainElement.appendChild(summary);
 
           seuraavaSivu2.remove();
+          mainElement.appendChild(fetchButton);
 
           setTimeout(() => {
             fetchButton.style.opacity = '1';

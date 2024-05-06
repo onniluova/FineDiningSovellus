@@ -60,8 +60,9 @@
 }
 
 .signup form button:hover {
-    font-size: 26px;
-    background-color: #050a21;
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: #0d1c62;
 }
 
 #loginInForm {

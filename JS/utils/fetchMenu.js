@@ -1,5 +1,10 @@
-fetch('../menu.json')
-  .then(response => response.json())
+fetch('http://localhost:3000/menu')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
   .then(data => {
     const container = document.querySelector('.container');
 
