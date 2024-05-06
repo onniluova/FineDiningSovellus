@@ -104,6 +104,14 @@ const henkiloMaaraElements = [
 ];
 
 seuraavaSivu.addEventListener('click', function() {
+
+  const user = JSON.parse(localStorage.getItem('user'));
+
+  if (!user) {
+    alert("Kirjaudu sisään jatkaaksesi");
+    return;
+  }
+
     henkiloMaaraElements.forEach(element => {
         element.classList.add('fade-out');
     });
