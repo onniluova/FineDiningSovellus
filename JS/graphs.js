@@ -4,43 +4,56 @@ import { buildSchema } from 'graphql';
 import { ruruHTML } from 'ruru/server';
 import fetch from 'node-fetch';
 
+const schema = buildSchema(`
+  type BikeRentalStation {
+    name: String
+    stationId: String
+  }
+
+  type Query {
+    bikeRentalStations: [BikeRentalStation]
+  }
+`);
+
 
 var root = {
   bikeRentalStations: async () => {
-    const response = await fetch('https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'digitransit-subscription-key': 'f78f313b1ec446049608163ec9868494',
-      },
-      body: JSON.stringify({
-        query: `
-          {
-            bikeRentalStations {
-              name
-              stationId
+    try {
+      const response = await fetch('https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/graphql',
+          'digitransit-subscription-key': 'f78f313b1ec446049608163ec9868494', // replace with your actual key
+        },
+        body: JSON.stringify({
+          query: `
+            {
+              bikeRentalStations {
+                name
+                stationId
+              }
             }
-          }
-        `,
-      }),
-    });
+          `,
+        }),
+      });
 
-    const data = await response.json();
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
 
-    return data.data.bikeRentalStations;
+      const data = await response.json();
+
+      return data.data.bikeRentalStations;
+    } catch (error) {
+      console.error('There was a problem with the fetch operation: ', error);
+    }
   },
 };
 
 var app = express();
 
 // Create and use the GraphQL handler.
-app.all(
-  "/graphql",
-  createHandler({
-    schema: schema,
-    rootValue: root,
-  })
-);
+app.use('/graphql', createHandler({ schema: schema, rootValue: root, graphiql: true }));
 
 // Serve the GraphiQL IDE.
 app.get("/", (_req, res) => {
