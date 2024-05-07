@@ -1,0 +1,72 @@
+body {
+  font-family: "Old Standard TT", serif;
+}
+
+.tab {
+  font-family: "Old Standard TT", serif;
+  overflow: hidden;
+  border: 1px solid #000000;
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+}
+
+.tab button {
+  font-family: "Old Standard TT", serif;
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tab button:hover {
+  background-color: #ded1bb;
+}
+
+.tab button.active {
+  background-color: #e6b761;
+}
+
+.tabcontent {
+  font-family: "Old Standard TT", serif;
+  display: none;
+  padding: 6px 12px;
+}
+
+.tabcontent table {
+  font-family: "Old Standard TT", serif;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabcontent th, .tabcontent td {
+  font-family: "Old Standard TT", serif;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.tabcontent th {
+  background-color: antiquewhite;
+}
+
+.tabcontent .editButton, .tabcontent .deleteButton {
+  font-family: "Old Standard TT", serif;
+  margin-right: 5px;
+  padding: 5px 10px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.tabcontent .editButton {
+  background-color: #4caf50;
+}
+
+.tabcontent .deleteButton {
+  background-color: #f44336;
+}

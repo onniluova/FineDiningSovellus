@@ -26,6 +26,16 @@ if (user) {
     location.reload();
   });
 
+  if (user && user.role === 'admin') {
+    let adminPanelButton = document.createElement('button');
+    adminPanelButton.id = 'adminPanelButton';
+    adminPanelButton.textContent = 'Avaa admin näkymä';
+    adminPanelButton.addEventListener('click', () => {
+      window.location.href = 'adminpanel.html';
+    });
+    userBox.appendChild(adminPanelButton);
+  }
+
   document.getElementById('viewReservationsButton').addEventListener('click', async () => {
     let asiakas_id = localStorage.getItem('asiakas_id');
     const response = await fetch(`http://127.0.0.1:3000/reservations/${asiakas_id}`);
