@@ -25,7 +25,7 @@
         <th>Päivämäärä</th>
         <th>Aika</th>
         <th>Asiakkaan ID</th>
-        <th></th>
+        <th>Toiminnot</th>
       </tr>
       </thead>
       <tbody>
@@ -35,9 +35,21 @@
 
   <div id="Tilaukset" class="tabcontent">
     <h3>Tilaukset</h3>
-    <p></p>
+    <table id="ordersTable">
+      <thead>
+      <tr>
+        <th>Tilauksen ID</th>
+        <th>Asiakkaan ID</th>
+        <th>Tuotteen ID</th>
+        <th>Määrä</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <button id="deleteAllOrdersButton">Poista kaikki tilaukset</button>
   </div>
-
 
   <div id="Käyttäjien hallinta" class="tabcontent">
     <h3>Käyttäjien hallinta</h3>
@@ -50,13 +62,14 @@
         <th>Sähköposti</th>
         <th>Salasana</th>
         <th>Rooli</th>
-        <th></th>
+        <th>Toiminnot</th>
       </tr>
       </thead>
       <tbody>
       </tbody>
     </table>
   </div>
+</div>
 
 <script src="../JS/adminpanel.js"></script>
 </body>

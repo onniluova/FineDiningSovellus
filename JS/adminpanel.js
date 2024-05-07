@@ -16,7 +16,6 @@ function openTab(evt, tabName) {
 }
 
 async function fetchAndDisplayData() {
-  // Fetch all reservations
   const reservationsResponse = await fetch('http://127.0.0.1:3000/reservations');
   const reservations = await reservationsResponse.json();
   const reservationsTable = document.getElementById('reservationsTable').getElementsByTagName('tbody')[0];
@@ -29,8 +28,8 @@ async function fetchAndDisplayData() {
       <td>${reservation.ajankohta}</td>
       <td>${reservation.asiakas_id}</td>
       <td>
-        <button class="editButton">Edit</button>
-        <button class="deleteButton" data-id="${reservation.reservation_id}">Delete</button>
+        <button class="editButton">Muokkaa</button>
+        <button class="deleteButton" data-id="${reservation.reservation_id}">Poista</button>
       </td>
     `;
 
@@ -49,10 +48,13 @@ async function fetchAndDisplayData() {
       }
     });
   });
+}
 
+async function fetchUsers() {
   const usersResponse = await fetch('http://127.0.0.1:3000/users');
   const users = await usersResponse.json();
   const usersTable = document.getElementById('usersTable').getElementsByTagName('tbody')[0];
+
   users.forEach(user => {
     const row = usersTable.insertRow();
     row.innerHTML = `
@@ -64,14 +66,87 @@ async function fetchAndDisplayData() {
       <td>${user.role}</td>
       <td>
         <button class="editButton">Muokkaa</button>
-        <button class="deleteButton">Poista</button>
+        <button class="deleteButton" data-id="${user.asiakas_id}">Poista</button>
       </td>
     `;
+
+    console.log('Row added:', row); // Add this line
+
+    row.querySelector('.deleteButton').addEventListener('click', async function() {
+      try {
+        const response = await fetch(`http://127.0.0.1:3000/users/${this.getAttribute('data-id')}`, {
+          method: 'DELETE'
+        });
+        if (response.ok) {
+          row.remove();
+        } else {
+          console.error('Error deleting user:', response.status);
+        }
+      } catch (error) {
+        console.error('Error deleting user:', error);
+      }
+    });
   });
 }
+
+async function fetchOrders() {
+  const ordersResponse = await fetch('http://127.0.0.1:3000/orders');
+  const orders = await ordersResponse.json();
+  const ordersTable = document.getElementById('ordersTable').getElementsByTagName('tbody')[0];
+  orders.forEach(order => {
+    const row = ordersTable.insertRow();
+    row.innerHTML = `
+      <td>${order.asiakas_id}</td>
+      <td>${order.tila}</td>
+      <td>${new Date(order.paivamaara).toLocaleDateString()}</td>
+      <td>${order.tuotteet}</td>
+      <td>
+        <button class="editButton">Muokkaa</button>
+        <button class="deleteButton" data-id="${order.asiakas_id}">Poista</button>
+      </td>
+    `;
+
+    row.querySelector('.deleteButton').addEventListener('click', async function() {
+      try {
+        const response = await fetch(`http://127.0.0.1:3000/orders/${this.getAttribute('data-id')}`, {
+          method: 'DELETE'
+        });
+        if (response.ok) {
+          row.remove();
+        } else {
+          console.error('Virhe poistaessa tilausta:', response.status);
+        }
+      } catch (error) {
+        console.error('Virhe poistaessa tilausta:', error);
+      }
+    });
+  });
+}
+
+document.getElementById('deleteAllOrdersButton').addEventListener('click', async function() {
+  try {
+    const response = await fetch('http://127.0.0.1:3000/orders', {
+      method: 'DELETE'
+    });
+    if (response.ok) {
+      const data = await response.json();
+      console.log(data.message);
+      fetchOrders();
+    } else {
+      console.error('Error deleting all orders:', response.status);
+    }
+  } catch (error) {
+    console.error('Error deleting all orders:', error);
+  }
+});
+
 
 document.getElementById('backButton').addEventListener('click', function() {
   window.location.href = 'index.html';
 });
 
-fetchAndDisplayData();
+window.onload = function() {
+  fetchOrders();
+  fetchUsers();
+  fetchAndDisplayData();
+};
