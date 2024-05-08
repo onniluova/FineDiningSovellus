@@ -57,7 +57,7 @@ async function addMarkersToMap() {
 
 async function getBikeStations() {
   try {
-    const response = await fetch('http://127.0.0.1:3000/reititys');
+    const response = await fetch('http://10.120.32.92/reititys');
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -71,7 +71,7 @@ async function getBikeStations() {
 
 async function getBikeStationById(id) {
   try {
-    const response = await fetch(`http://127.0.0.1:3000/reititys/${id}`);
+    const response = await fetch(`http://10.120.32.92/app/reititys/${id}`);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
