@@ -41,10 +41,10 @@ async function fetchAndDisplayData() {
         if (response.ok) {
           row.remove();
         } else {
-          console.error('Error deleting reservation:', response.status);
+          console.error('Virhe poistaessa varausta:', response.status);
         }
       } catch (error) {
-        console.error('Error deleting reservation:', error);
+        console.error('Virhe poistaessa varausta:', error);
       }
     });
   });
@@ -80,10 +80,10 @@ async function fetchUsers() {
         if (response.ok) {
           row.remove();
         } else {
-          console.error('Error deleting user:', response.status);
+          console.error('Virhe poistaessa tilauksia:', response.status);
         }
       } catch (error) {
-        console.error('Error deleting user:', error);
+        console.error('Virhe poistaessa tilauksia:', error);
       }
     });
   });
@@ -134,10 +134,10 @@ document.getElementById('deleteAllOrdersButton').addEventListener('click', async
       console.log(data.message);
       fetchOrders();
     } else {
-      console.error('Error deleting all orders:', response.status);
+      console.error('Virhe poistaessa tilauksia:', response.status);
     }
   } catch (error) {
-    console.error('Error deleting all orders:', error);
+    console.error('Virhe poistaessa tilauksia:', error);
   }
 });
 
@@ -219,8 +219,9 @@ document.getElementById('updateMenuButton').addEventListener('click', async func
 
   if (response.ok) {
     console.log('Menu updated successfully');
+    alert("Menun päivitys onnistui.");
   } else {
-    console.error('Error updating menu:', await response.text());
+    console.error('Virhe päivittäessä menua:', await response.text());
   }
 });
 
