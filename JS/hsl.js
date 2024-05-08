@@ -1,4 +1,4 @@
-var map = L.map('map').setView([60.1666052, 24.9430558], 16);
+var map = L.map('map').setView([60.1666052, 24.9430558], 15);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -13,6 +13,7 @@ let circle = L.circle([60.166666, 24.945596], {
 circle.bindPopup("Olet täällä!");
 
 const bikeStationIDs = ["009", "161", "007", "010", "018", "019", "049", "011", "008", "024"]
+
 
 async function addMarkersToMap() {
   try {
@@ -85,5 +86,19 @@ async function getBikeStationById(id) {
 window.onload = function() {
   getBikeStations();
   getBikeStationById("070");
-  addMarkersToMap();
+  //addMarkersToMap();
 }
+
+document.getElementById('show-map-button').addEventListener('click', function() {
+  let mapDiv = document.getElementById('map');
+  let button = document.getElementById('show-map-button');
+  if (mapDiv.style.display === 'none' || mapDiv.style.display === '') {
+    mapDiv.style.display = 'block';
+    button.innerHTML = 'Sulje Kartta';
+    addMarkersToMap();
+    map.invalidateSize();
+  } else {
+    mapDiv.style.display = 'none';
+    button.innerHTML = 'Avaa Kartta';
+  }
+});
