@@ -38,7 +38,7 @@ if (user) {
 
   document.getElementById('viewReservationsButton').addEventListener('click', async () => {
     let asiakas_id = localStorage.getItem('asiakas_id');
-    const response = await fetch(`http://10.120.32.92/${asiakas_id}`);
+    const response = await fetch(`http://10.120.32.92/app/${asiakas_id}`);
     if (response.ok) {
       const reservations = await response.json();
       console.log(reservations);
@@ -76,7 +76,7 @@ if (user) {
       document.querySelectorAll('.cancelButton').forEach(button => {
         button.addEventListener('click', async (event) => {
           const reservationId = event.target.getAttribute('data-id');
-          const response = await fetch(`http://10.120.32.92/reservations/${reservationId}`, {
+          const response = await fetch(`http://10.120.32.92/app/reservations/${reservationId}`, {
             method: 'DELETE'
           });
           if (response.ok) {
