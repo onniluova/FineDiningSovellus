@@ -1,4 +1,4 @@
-fetch('http://localhost:3000/menu')
+fetch('http://10.120.32.92/menu')
   .then(response => {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
