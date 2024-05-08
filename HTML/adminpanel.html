@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="../CSS/styles.css">
+  <link rel="stylesheet" href="../CSS/adminpanel.css">
+</head>
+<body>
+<div class="admin-panel">
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'Varaukset')">Varaukset</button>
+    <button class="tablinks" onclick="openTab(event, 'Tilaukset')">Tilaukset</button>
+    <button class="tablinks" onclick="openTab(event, 'Käyttäjien hallinta')">Käyttäjät</button>
+    <button class="tablinks" onclick="openTab(event, 'Menu')">Menu</button>
+    <button id="backButton">Takaisin</button>
+  </div>
+
+  <div id="Varaukset" class="tabcontent">
+    <h3>Varaukset</h3>
+    <table id="reservationsTable">
+      <thead>
+      <tr>
+        <th>Varauksen ID</th>
+        <th>Asiakkaiden määrä</th>
+        <th>Päivämäärä</th>
+        <th>Aika</th>
+        <th>Asiakkaan ID</th>
+        <th>Toiminnot</th>
+      </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="Tilaukset" class="tabcontent">
+    <h3>Tilaukset</h3>
+    <table id="ordersTable">
+      <thead>
+      <tr>
+        <th>Asiakkaan ID</th>
+        <th>Tilauksen ID</th>
+        <th>Tila</th>
+        <th>Tuotteet</th>
+        <th>Päivämäärä</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <button id="deleteAllOrdersButton">Poista kaikki tilaukset</button>
+  </div>
+
+  <div id="Käyttäjien hallinta" class="tabcontent">
+    <h3>Käyttäjien hallinta</h3>
+    <table id="usersTable">
+      <thead>
+      <tr>
+        <th>Asiakkaan ID</th>
+        <th>Etunimi</th>
+        <th>Sukunimi</th>
+        <th>Sähköposti</th>
+        <th>Salasana</th>
+        <th>Rooli</th>
+        <th>Toiminnot</th>
+      </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="Menu" class="tabcontent">
+    <h3>Menu</h3>
+    <form id="menuForm">
+    </form>
+    <button id="updateMenuButton">Päivitä menu</button>
+  </div>
+
+
+</div>
+
+<script src="../JS/adminpanel.js"></script>
+</body>
+</html>

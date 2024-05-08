@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       last_name: sukunimi,
       email: email,
       password: password,
+      role: 'user'
     };
 
     console.log(newUser);
