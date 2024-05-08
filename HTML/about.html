@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meistä</title>
     <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
@@ -73,6 +79,13 @@
         <section class="reservations">
         </section>
         <div class="info-box">
+          <div class="konkeli">
+            <h3>Menikö muutamat juomat useammaksi? Katso lähellä sijaitsevat citybike asemat:</h3>
+            <div id="map">
+
+            </div>
+
+          </div>
           <div class="container">
             <div class="column-1">
               <h3> Ota yhteyttä!</h3>
@@ -108,5 +121,6 @@
 
     <script src="../JS/fx.js"></script>
     <script src="../JS/userBar.js"></script>
+    <script src="../JS/hsl.js"></script>
 </body>
 </html>
