@@ -5,7 +5,7 @@ body {
 .tab {
   font-family: "Old Standard TT", serif;
   overflow: hidden;
-  border: 1px solid #000000;
+  border: 2px solid #0e1c36;
   background-color: antiquewhite;
   display: flex;
   justify-content: center;
@@ -69,4 +69,21 @@ body {
 
 .tabcontent .deleteButton {
   background-color: #f44336;
+}
+
+#updateMenuButton {
+  font-family: "Old Standard TT", serif;
+  font-size: 25px;
+  margin-top: 10px;
+  margin-right: 5px;
+  padding: 5px 10px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #4caf50;
+  border-radius: 5px;
+}
+
+#updateMenuButton:hover {
+  background-color: #45a049;
 }

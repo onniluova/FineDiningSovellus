@@ -239,6 +239,11 @@ seuraavaSivu.addEventListener('click', function() {
               .then(data => {
                 if (data.message) {
                   console.log(data.message);
+                  alert('Varaus onnistui!');
+
+                  setTimeout(() => {
+                    window.location.href = 'index.html';
+                  });
                 } else {
                   console.error('Error:', data.error);
                 }

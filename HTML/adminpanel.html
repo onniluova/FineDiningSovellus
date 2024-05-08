@@ -12,6 +12,7 @@
     <button class="tablinks" onclick="openTab(event, 'Varaukset')">Varaukset</button>
     <button class="tablinks" onclick="openTab(event, 'Tilaukset')">Tilaukset</button>
     <button class="tablinks" onclick="openTab(event, 'Käyttäjien hallinta')">Käyttäjät</button>
+    <button class="tablinks" onclick="openTab(event, 'Menu')">Menu</button>
     <button id="backButton">Takaisin</button>
   </div>
 
@@ -38,10 +39,11 @@
     <table id="ordersTable">
       <thead>
       <tr>
-        <th>Tilauksen ID</th>
         <th>Asiakkaan ID</th>
-        <th>Tuotteen ID</th>
-        <th>Määrä</th>
+        <th>Tilauksen ID</th>
+        <th>Tila</th>
+        <th>Tuotteet</th>
+        <th>Päivämäärä</th>
         <th></th>
       </tr>
       </thead>
@@ -69,6 +71,15 @@
       </tbody>
     </table>
   </div>
+
+  <div id="Menu" class="tabcontent">
+    <h3>Menu</h3>
+    <form id="menuForm">
+    </form>
+    <button id="updateMenuButton">Päivitä menu</button>
+  </div>
+
+
 </div>
 
 <script src="../JS/adminpanel.js"></script>

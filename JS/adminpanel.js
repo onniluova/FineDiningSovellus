@@ -97,9 +97,10 @@ async function fetchOrders() {
     const row = ordersTable.insertRow();
     row.innerHTML = `
       <td>${order.asiakas_id}</td>
+      <td>${order.order_id}</td>
       <td>${order.tila}</td>
-      <td>${new Date(order.paivamaara).toLocaleDateString()}</td>
       <td>${order.tuotteet}</td>
+      <td>${new Date(order.paivamaara).toLocaleDateString()}</td>
       <td>
         <button class="editButton">Muokkaa</button>
         <button class="deleteButton" data-id="${order.asiakas_id}">Poista</button>
@@ -140,6 +141,88 @@ document.getElementById('deleteAllOrdersButton').addEventListener('click', async
   }
 });
 
+async function fetchMenu() {
+  const response = await fetch('http://127.0.0.1:3000/menu');
+  const menu = await response.json();
+  const menuForm = document.getElementById('menuForm');
+  menuForm.innerHTML = '';
+
+  for (const category in menu.menu) {
+    const categoryDiv = document.createElement('div');
+    categoryDiv.innerHTML = `<h2>${category}</h2>`;
+    menuForm.appendChild(categoryDiv);
+
+    if (typeof menu.menu[category] === 'object' && !Array.isArray(menu.menu[category])) {
+      for (const subcategory in menu.menu[category]) {
+        const subcategoryDiv = document.createElement('div');
+        subcategoryDiv.innerHTML = `<h3>${subcategory}</h3>`;
+        categoryDiv.appendChild(subcategoryDiv);
+
+        menu.menu[category][subcategory].forEach((item, index) => {
+          const itemDiv = createItemDiv(item, index, subcategory);
+          subcategoryDiv.appendChild(itemDiv);
+        });
+      }
+    } else {
+      menu.menu[category].forEach((item, index) => {
+        const itemDiv = createItemDiv(item, index, category);
+        categoryDiv.appendChild(itemDiv);
+      });
+    }
+  }
+}
+
+function createItemDiv(item, index, category) {
+  const itemDiv = document.createElement('div');
+  itemDiv.innerHTML = `
+    <label for="${category}${index}nimi">Nimi:</label>
+    <input id="${category}${index}Nimi" type="text" value="${item.nimi}">
+    <label for="${category}${index}Price">Hinta:</label>
+    <input id="${category}${index}Price" type="number" value="${item.hinta}">
+  `;
+  return itemDiv;
+}
+
+document.getElementById('updateMenuButton').addEventListener('click', async function() {
+  const menuForm = document.getElementById('menuForm');
+  const newMenu = {};
+
+  for (const categoryDiv of menuForm.children) {
+    const category = categoryDiv.querySelector('h2').innerText;
+    newMenu[category] = [];
+
+    for (const itemDiv of categoryDiv.querySelectorAll('div')) {
+      if (itemDiv.querySelector('h3')) {
+        const subcategory = itemDiv.querySelector('h3').innerText;
+        newMenu[category][subcategory] = [];
+
+        for (const subItemDiv of itemDiv.querySelectorAll('div')) {
+          const name = subItemDiv.querySelector('input[type="text"]').value;
+          const price = Number(subItemDiv.querySelector('input[type="number"]').value);
+          newMenu[category][subcategory].push({ nimi: name, hinta: price });
+        }
+      } else {
+        const name = itemDiv.querySelector('input[type="text"]').value;
+        const price = Number(itemDiv.querySelector('input[type="number"]').value);
+        newMenu[category].push({ nimi: name, hinta: price });
+      }
+    }
+  }
+
+  const response = await fetch('http://127.0.0.1:3000/menu', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ menu: newMenu })
+  });
+
+  if (response.ok) {
+    console.log('Menu updated successfully');
+  } else {
+    console.error('Error updating menu:', await response.text());
+  }
+});
 
 document.getElementById('backButton').addEventListener('click', function() {
   window.location.href = 'index.html';
@@ -149,4 +232,5 @@ window.onload = function() {
   fetchOrders();
   fetchUsers();
   fetchAndDisplayData();
+  fetchMenu();
 };
