@@ -6,7 +6,6 @@ fetch('http://10.120.32.92/app/menu')
     return response.json();
   })
   .then(data => {
-    console.log(data);
     const container = document.querySelector('.container');
 
     for (const category in data.menu) {
@@ -17,10 +16,12 @@ fetch('http://10.120.32.92/app/menu')
       categoryDiv.appendChild(categoryTitle);
 
       if (category === 'Juomat') {
-        data.menu[category].forEach(item => {
-          const itemDiv = createItemDiv(item);
-          categoryDiv.appendChild(itemDiv);
-        });
+        for (const subcategory in data.menu[category]) {
+          data.menu[category][subcategory].forEach(item => {
+            const itemDiv = createItemDiv(item);
+            categoryDiv.appendChild(itemDiv);
+          });
+        }
       } else {
         data.menu[category].forEach(item => {
           const itemDiv = createItemDiv(item);
