@@ -44,6 +44,11 @@
     box-shadow: 0px 0px 10px 5px rgb(255, 255, 255);
 }
 
+#title img, #title2 img, #title3 img {
+  max-width: 100%;
+  height: auto;
+}
+
 .text-content {
     margin-left: 50px;
     width: 60%;

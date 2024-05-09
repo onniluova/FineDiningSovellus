@@ -24,7 +24,7 @@ body {
         left: 0;
         right: 0;
         bottom: 0;
-        background-image: url("../images/bg.jpg");
+        background-image: url("../Images/bg.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         opacity: 0.2;
@@ -333,6 +333,7 @@ body {
   background-color: #d0c0ac;
 }
 
+
 .container{
   display: flex;
   justify-content: center;
@@ -348,5 +349,35 @@ body {
 }
 .container h3 {
   font-style: italic;
+
+}
+.konkeli {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#map {
+  height: 400px;
+  width: 60%;
+  display: none;
+}
+#show-map-button {
+  background-color: antiquewhite;
+  border: none;
+  color: #091235;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+#show-map-button:hover {
+  background-color: antiquewhite;
+  opacity: 0.9
 }
 

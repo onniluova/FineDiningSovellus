@@ -26,9 +26,19 @@ if (user) {
     location.reload();
   });
 
+  if (user && user.role === 'admin') {
+    let adminPanelButton = document.createElement('button');
+    adminPanelButton.id = 'adminPanelButton';
+    adminPanelButton.textContent = 'Avaa admin näkymä';
+    adminPanelButton.addEventListener('click', () => {
+      window.location.href = 'adminpanel.html';
+    });
+    userBox.appendChild(adminPanelButton);
+  }
+
   document.getElementById('viewReservationsButton').addEventListener('click', async () => {
     let asiakas_id = localStorage.getItem('asiakas_id');
-    const response = await fetch(`http://127.0.0.1:3000/reservations/${asiakas_id}`);
+    const response = await fetch(`http://10.120.32.92/${asiakas_id}`);
     if (response.ok) {
       const reservations = await response.json();
       console.log(reservations);
@@ -66,7 +76,7 @@ if (user) {
       document.querySelectorAll('.cancelButton').forEach(button => {
         button.addEventListener('click', async (event) => {
           const reservationId = event.target.getAttribute('data-id');
-          const response = await fetch(`http://127.0.0.1:3000/reservations/${reservationId}`, {
+          const response = await fetch(`http://10.120.32.92/reservations/${reservationId}`, {
             method: 'DELETE'
           });
           if (response.ok) {

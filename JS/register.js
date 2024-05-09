@@ -14,11 +14,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
       last_name: sukunimi,
       email: email,
       password: password,
+      role: 'user'
     };
 
     console.log(newUser);
 
-    fetch('http://127.0.0.1:3000/register', {
+    fetch('http://10.120.32.92/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

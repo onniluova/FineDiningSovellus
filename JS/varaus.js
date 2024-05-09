@@ -228,7 +228,7 @@ seuraavaSivu.addEventListener('click', function() {
           }, 100);
 
           fetchButton.addEventListener('click', function() {
-            fetch('http://127.0.0.1:3000/reservations', {
+            fetch('http://10.120.32.92/reservations', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -239,6 +239,11 @@ seuraavaSivu.addEventListener('click', function() {
               .then(data => {
                 if (data.message) {
                   console.log(data.message);
+                  alert('Varaus onnistui!');
+
+                  setTimeout(() => {
+                    window.location.href = 'index.html';
+                  });
                 } else {
                   console.error('Error:', data.error);
                 }

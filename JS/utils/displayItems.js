@@ -1,4 +1,4 @@
-fetch('http://localhost:3000/menu') // replace with your server's address
+fetch('http://10.120.32.92/menu') // replace with your server's address
   .then(response => {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
