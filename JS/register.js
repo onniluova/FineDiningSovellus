@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     console.log(newUser);
 
-    fetch('http://10.120.32.92/register', {
+    fetch('http://10.120.32.92/app/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

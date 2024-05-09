@@ -228,7 +228,7 @@ seuraavaSivu.addEventListener('click', function() {
           }, 100);
 
           fetchButton.addEventListener('click', function() {
-            fetch('http://10.120.32.92/reservations', {
+            fetch('http://10.120.32.92/app/reservations', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
