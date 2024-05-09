@@ -1,3 +1,9 @@
+/**
+ * Opens a tab in the admin panel.
+ *
+ * @param {Event} evt - The event that triggered the function.
+ * @param {string} tabName - The name of the tab to open.
+ */
 function openTab(evt, tabName) {
   let i, tabcontent, tablinks;
 
@@ -15,6 +21,15 @@ function openTab(evt, tabName) {
   evt.currentTarget.className += " active";
 }
 
+/**
+ * Asynchronously fetches reservation data from the server and displays it in a table.
+ * Each row in the table has an 'Edit' button and a 'Delete' button.
+ * Clicking the 'Delete' button sends a DELETE request to the server and removes the row from the table if the request is successful.
+ *
+ * @async
+ * @function
+ * @throws {Error} Will throw an error if the fetch operation fails or if the server returns a non-OK HTTP status.
+ */
 async function fetchAndDisplayData() {
   const reservationsResponse = await fetch('http://10.120.32.92/reservations');
   const reservations = await reservationsResponse.json();
@@ -49,7 +64,13 @@ async function fetchAndDisplayData() {
     });
   });
 }
-
+/**
+ * Iterates over an array of users, creating a new row in the users table for each user.
+ * Each row contains the user's details and an 'Edit' and 'Delete' button.
+ * Clicking the 'Delete' button sends a DELETE request to the server and removes the row from the table if the request is successful.
+ *
+ * @param {Object[]} users - An array of user objects.
+ */
 async function fetchUsers() {
   const usersResponse = await fetch('http://10.120.32.92/users');
   const users = await usersResponse.json();
@@ -88,7 +109,14 @@ async function fetchUsers() {
     });
   });
 }
-
+/**
+ * Asynchronously fetches order data from the server and displays it in a table.
+ * Each row in the table contains the order's details.
+ *
+ * @async
+ * @function
+ * @throws {Error} Will throw an error if the fetch operation fails or if the server returns a non-OK HTTP status.
+ */
 async function fetchOrders() {
   const ordersResponse = await fetch('http://10.120.32.92/app/orders');
   const orders = await ordersResponse.json();
