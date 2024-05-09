@@ -1,4 +1,7 @@
-let loginForm = document.querySelector('.login-form form');
+let loginForm;
+if (typeof window !== 'undefined') {
+  loginForm = document.querySelector('.login-form form');
+}
 
 /**
  * Asynchronously fetches order data from the server and displays it in a table.
@@ -8,7 +11,7 @@ let loginForm = document.querySelector('.login-form form');
  * @function
  * @throws {Error} Will throw an error if the fetch operation fails or if the server returns a non-OK HTTP status.
  */
-async function loginUser(event) {
+ export async function loginUser(event) {
   event.preventDefault();
   let email = document.getElementById('email').value;
   let password = document.getElementById('password').value;
@@ -47,4 +50,6 @@ async function loginUser(event) {
   }
 }
 
-loginForm.addEventListener('submit', loginUser);
+if (loginForm) {
+  loginForm.addEventListener('submit', loginUser);
+}
