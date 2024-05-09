@@ -30,3 +30,6 @@ Bijou on hyödyllinen, koska se tarjoaa asiakkaille helpon ja kätevän tavan:
 4. Käytä sovellusta:
 
     Kun sovellus on käynnissä, voit käyttää sitä verkkoselaimessa avaamalla index.html tiedoston.
+
+
+JSdocin linkki: [https://users.metropolia.fi/~jannassl/projektinJsDoc/out/]
