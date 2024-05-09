@@ -1,5 +1,7 @@
 # Fine Dining Sovellus: Bijou
 
+Linkki sovellukseen: http://10.120.32.92/app/HTML/index.html
+
 # Mikä Bijou on?
 
 Bijou on fiktiivinen fine dining -ravintola, jolla on verkkosivusto. Sivustolla on tietoa ravintolasta, sen tarjoamista palveluista ja mahdollisuus tehdä pöytävarauksia ja tilata ruokaa verkossa.
