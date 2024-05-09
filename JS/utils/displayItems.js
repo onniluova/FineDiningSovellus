@@ -30,20 +30,10 @@ fetch('http://10.120.32.92/app/menu')
       categoryDiv.appendChild(categoryTitle);
 
       if (category === 'Juomat') {
-        for (const subcategory in data.menu[category]) {
-          const subcategoryDiv = document.createElement('div');
-          subcategoryDiv.className = subcategory.toLowerCase();
-          const subcategoryTitle = document.createElement('h2');
-          subcategoryTitle.textContent = subcategory;
-          subcategoryDiv.appendChild(subcategoryTitle);
-
-          data.menu[category][subcategory].forEach(item => {
-            const itemDiv = createItemDiv(item);
-            subcategoryDiv.appendChild(itemDiv);
-          });
-
-          categoryDiv.appendChild(subcategoryDiv);
-        }
+        data.menu[category].forEach(item => {
+          const itemDiv = createItemDiv(item);
+          categoryDiv.appendChild(itemDiv);
+        });
       } else {
         data.menu[category].forEach(item => {
           const itemDiv = createItemDiv(item);
