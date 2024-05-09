@@ -83,5 +83,14 @@ function createItemDiv(item) {
   itemCheckbox.value = item.nimi;
   itemDiv.appendChild(itemCheckbox);
 
+  const itemAllergens = document.createElement('p');
+
+  if (item.allergeenit) {
+    itemAllergens.textContent = `Allergeenit: ${item.allergeenit.join(', ')}`;
+  } else {
+    itemAllergens.textContent = 'Allergeenit: Ei tiedossa';
+  }
+  itemDiv.appendChild(itemAllergens);
+
   return itemDiv;
 }
