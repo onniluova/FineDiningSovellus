@@ -10,8 +10,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  height: 100vh;
+  flex-wrap: wrap;
 }
 
 .container div {
@@ -62,7 +61,7 @@ body {
 }
 
 .ruoat h1, .juomat h1 {
-  font-size: 1em;
+  font-size: 3em;
   color: #333;
 }
 
@@ -75,15 +74,15 @@ body {
 }
 
 .juomat {
-  max-height: 80vh;
+  max-height: 100vh;
   overflow-y: auto;
 }
 
 .juomat div {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  font-size: 10px;
+  flex-direction: row;
+  align-items: center;
+  font-size: 16px;
   overflow: auto;
 }
 
