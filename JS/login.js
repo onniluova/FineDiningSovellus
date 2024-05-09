@@ -13,7 +13,7 @@ async function loginUser(event) {
   let email = document.getElementById('email').value;
   let password = document.getElementById('password').value;
 
-  const response = await fetch('http://10.120.32.92/app/login', {
+  const response = await fetch('http://127.0.0.1:3000/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

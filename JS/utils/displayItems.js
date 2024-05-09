@@ -1,16 +1,3 @@
-/**
- * Fetches menu data from the server.
- * If the request is successful, the data is logged to the console and used to create a menu in the container element.
- * The menu is divided into categories, and each category is divided into subcategories if it is the 'Juomat' category.
- * Each category and subcategory contains items, which are created by the createItemDiv function.
- * A 'Add to Cart' button is also created and added to the container element.
- * If the request fails, the server's response status is logged to the console.
- *
- * @async
- * @function
- * @throws {Error} Will throw an error if the fetch operation fails or if the server returns a non-OK HTTP status.
- */
-
 fetch('http://10.120.32.92/app/menu')
   .then(response => {
     if (!response.ok) {
