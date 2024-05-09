@@ -32,4 +32,4 @@ Bijou on hyödyllinen, koska se tarjoaa asiakkaille helpon ja kätevän tavan:
     Kun sovellus on käynnissä, voit käyttää sitä verkkoselaimessa avaamalla index.html tiedoston.
 
 
-JSdocin linkki: [https://users.metropolia.fi/~jannassl/projektinJsDoc/out/]
+Front-end JSdocin linkki: [https://users.metropolia.fi/~jannassl/projektinJsDoc/out/]
