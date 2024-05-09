@@ -50,7 +50,7 @@ async function fetchAndDisplayData() {
 
     row.querySelector('.deleteButton').addEventListener('click', async function() {
       try {
-        const response = await fetch(`http://127.0.0.1:3000/reservations/${this.getAttribute('data-id')}`, {
+        const response = await fetch(`http://10.120.32.92/app/reservations/${this.getAttribute('data-id')}`, {
           method: 'DELETE'
         });
         if (response.ok) {
@@ -72,7 +72,7 @@ async function fetchAndDisplayData() {
  * @param {Object[]} users - An array of user objects.
  */
 async function fetchUsers() {
-  const usersResponse = await fetch('http://127.0.0.1:3000/users');
+  const usersResponse = await fetch('http://10.120.32.92/app/users');
   const users = await usersResponse.json();
   const usersTable = document.getElementById('usersTable').getElementsByTagName('tbody')[0];
 
@@ -95,7 +95,7 @@ async function fetchUsers() {
 
     row.querySelector('.deleteButton').addEventListener('click', async function() {
       try {
-        const response = await fetch(`http://127.0.0.1:3000/orders/${this.getAttribute('data-id')}`, {
+        const response = await fetch(`hhttp://10.120.32.92/app/orders/${this.getAttribute('data-id')}`, {
           method: 'DELETE'
         });
         if (response.ok) {
@@ -118,7 +118,7 @@ async function fetchUsers() {
  * @throws {Error} Will throw an error if the fetch operation fails or if the server returns a non-OK HTTP status.
  */
 async function fetchOrders() {
-  const ordersResponse = await fetch('http://127.0.0.1:3000/orders');
+  const ordersResponse = await fetch('http://10.120.32.92/app/orders');
   const orders = await ordersResponse.json();
   const ordersTable = document.getElementById('ordersTable').getElementsByTagName('tbody')[0];
   orders.forEach(order => {
@@ -137,7 +137,7 @@ async function fetchOrders() {
 
     row.querySelector('.deleteButton').addEventListener('click', async function() {
       try {
-        const response = await fetch(`http://127.0.0.1:3000/orders/${this.getAttribute('data-id')}`, {
+        const response = await fetch(`http://10.120.32.92/app/orders/${this.getAttribute('data-id')}`, {
           method: 'DELETE'
         });
         if (response.ok) {
@@ -154,7 +154,7 @@ async function fetchOrders() {
 
 document.getElementById('deleteAllOrdersButton').addEventListener('click', async function() {
   try {
-    const response = await fetch('http://127.0.0.1:3000/orders', {
+    const response = await fetch('http://10.120.32.92/app/orders', {
       method: 'DELETE'
     });
     if (response.ok) {
@@ -170,7 +170,7 @@ document.getElementById('deleteAllOrdersButton').addEventListener('click', async
 });
 
 async function fetchMenu() {
-  const response = await fetch('http://127.0.0.1:3000/menu');
+  const response = await fetch('http://10.120.32.92/app/menu');
   const menu = await response.json();
   const menuForm = document.getElementById('menuForm');
   menuForm.innerHTML = '';
@@ -237,7 +237,7 @@ document.getElementById('updateMenuButton').addEventListener('click', async func
     }
   }
 
-  const response = await fetch('http://127.0.0.1:3000/menu', {
+  const response = await fetch('http://10.120.32.92/app/menu', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

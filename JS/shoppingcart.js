@@ -86,7 +86,7 @@ if (selectedItems.length > 0) {
     };
 
     try {
-      const response = await fetch('http://127.0.0.1:3000/orders', {
+      const response = await fetch('http://10.120.32.92/app/orders', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
