@@ -1,6 +1,14 @@
 const selectedItems = JSON.parse(sessionStorage.getItem('selectedItems')) || [];
 const mainElement = document.querySelector('main');
 
+/**
+ * Asynchronously fetches menu data from the server and calculates the total price of the selected items.
+ * The total price is then displayed in a new paragraph element that is appended to the main element.
+ *
+ * @async
+ * @function
+ * @throws {Error} Will throw an error if the fetch operation fails or if the server returns a non-OK HTTP status.
+ */
 fetch('../menu.json')
   .then(response => response.json())
   .then(menuData => {

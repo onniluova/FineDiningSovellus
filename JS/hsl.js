@@ -1,3 +1,6 @@
+
+
+
 var map = L.map('map').setView([60.1666052, 24.9430558], 15);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -14,7 +17,14 @@ circle.bindPopup("Olet täällä!");
 
 const bikeStationIDs = ["009", "161", "007", "010", "018", "019", "049", "011", "008", "024"]
 
-
+/**
+ * Asynchronously fetches bike station data for a list of station IDs and adds markers to the map for each station.
+ * Each marker's popup contains the station's name, the number of bikes available, and the number of spaces available.
+ *
+ * @async
+ * @function
+ * @throws Will throw an error if the fetch operation fails or if the server returns a non-OK HTTP status.
+ */
 async function addMarkersToMap() {
   try {
 
@@ -53,7 +63,14 @@ async function addMarkersToMap() {
 }
 
 
-
+/**
+ * Asynchronously fetches all bike station data from the HSL API.
+ *
+ * @async
+ * @function
+ * @returns {Promise<Object[]>} A promise that resolves to an array of bike station objects.
+ * @throws {Error} Will throw an error if the fetch operation fails or if the server returns a non-OK HTTP status.
+ */
 
 async function getBikeStations() {
   try {
@@ -69,6 +86,15 @@ async function getBikeStations() {
   }
 }
 
+/**
+ * Asynchronously fetches data for a specific bike station from the HSL API.
+ *
+ * @async
+ * @function
+ * @param {string} id - The ID of the bike station.
+ * @returns {Promise<Object>} A promise that resolves to a bike station object.
+ * @throws {Error} Will throw an error if the fetch operation fails or if the server returns a non-OK HTTP status.
+ */
 async function getBikeStationById(id) {
   try {
     const response = await fetch(`http://127.0.0.1:3000/reititys/${id}`);
@@ -83,12 +109,21 @@ async function getBikeStationById(id) {
   }
 }
 
+/**
+ * Initializes the application by fetching data for all bike stations and for a specific bike station.
+ *
+ * @function
+ */
 window.onload = function() {
   getBikeStations();
   getBikeStationById("070");
-  //addMarkersToMap();
 }
 
+/**
+ * Adds an event listener to the 'show-map-button' that displays the map when the button is clicked.
+ *
+ * @function
+ */
 document.getElementById('show-map-button').addEventListener('click', function() {
   let mapDiv = document.getElementById('map');
   let button = document.getElementById('show-map-button');

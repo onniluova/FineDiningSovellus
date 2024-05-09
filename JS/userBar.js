@@ -2,6 +2,13 @@ let user = JSON.parse(localStorage.getItem('user'));
 let loginButton = document.getElementById('login');
 let registerButton = document.getElementById('register');
 
+/**
+ * If the user object exists, the login and register buttons are hidden and a new user box is created.
+ * The user box contains the user's email and a 'Logout' and 'View Reservations' button.
+ * Clicking the 'Logout' button removes the user object and the customer ID from local storage, shows the login and register buttons, and reloads the page.
+ * If the user is an admin, an 'Open Admin View' button is added to the user box.
+ * Clicking the 'View Reservations' button fetches the user's reservations from the server and logs them to the console.
+ */
 if (user) {
   console.log("User object: ", user);
   loginButton.style.display = 'none';

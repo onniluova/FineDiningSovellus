@@ -1,6 +1,16 @@
 document.addEventListener('DOMContentLoaded', (event) => {
   let registerForm = document.querySelector('.signup form');
 
+  /**
+ * Asynchronously sends a registration request to the server with the user's details.
+ * If the request is successful, a success message is displayed and the user is redirected to the login page after 2 seconds.
+ * If the request fails, the server's response is logged to the console.
+ *
+ * @async
+ * @function
+ * @param {Event} event - The event that triggered the function.
+ * @throws {Error} Will throw an error if the fetch operation fails or if the server returns a non-OK HTTP status.
+ */
   function registerUser(event) {
     event.preventDefault();
     console.log('registerUser called');

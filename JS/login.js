@@ -1,4 +1,13 @@
 let loginForm = document.querySelector('.login-form form');
+
+/**
+ * Asynchronously fetches order data from the server and displays it in a table.
+ * Each row in the table contains the order's details.
+ *
+ * @async
+ * @function
+ * @throws {Error} Will throw an error if the fetch operation fails or if the server returns a non-OK HTTP status.
+ */
 async function loginUser(event) {
   event.preventDefault();
   let email = document.getElementById('email').value;

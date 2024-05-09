@@ -10,6 +10,14 @@ henkiloMaara.style.opacity = '0';
 henkiloMaaraText.style.opacity = '0';
 seuraavaSivu.style.opacity = '0';
 
+/**
+ * Changes the appearance of the balls based on the ball that is currently being hovered over.
+ * If a ball has not been selected, the balls that have a lower or equal number than the hovered ball are enlarged and their background color is changed.
+ * A span element with the ball's number is also added to these balls.
+ * The balls that have a higher number than the hovered ball are returned to their original size and color.
+ *
+ * @param {Event} e - The event that triggered the function.
+ */
 function changeOtherBalls(e) {
     const hoveredBallNumber = parseInt(e.target.id.replace('pallo', ''));
 
@@ -41,6 +49,10 @@ function changeOtherBalls(e) {
     }
 }
 
+/**
+ * Returns all balls to their original size and color.
+ */
+
 function resetBalls() {
     balls.forEach(ball => {
         ball.style.backgroundColor = '#cbbca4';
@@ -54,6 +66,15 @@ function resetBalls() {
     henkilo.style.fontSize = '60px';
 }
 
+/**
+ * Selects a number of people.
+ * If a number has not been selected yet, the ball's background color is changed, its size is increased, and the number of selected people is updated.
+ * The 'Next Page' button is also made visible.
+ * If a number has already been selected, the ball's background color and size are reset, and the number of selected people is updated.
+ * The 'Next Page' button is also made invisible.
+ *
+ * @param {HTMLElement} ball - The ball that was clicked.
+ */
 function selectNumberOfPeople(ball) {
     const currentBallNumber = parseInt(ball.id.replace('pallo', ''));
 

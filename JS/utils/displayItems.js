@@ -1,4 +1,4 @@
-fetch('http://127.0.0.1:3000/menu')
+fetch('http://10.120.32.92/app/menu')
   .then(response => {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -50,6 +50,15 @@ fetch('http://127.0.0.1:3000/menu')
     container.appendChild(orderButton);
   })
   .catch(error => console.error('Error:', error));
+/**
+ * Creates a div element for an item.
+ * The div contains the item's name, description, and price, as well as an 'Add to Cart' button.
+ * Clicking the 'Add to Cart' button adds the item to the cart.
+ *
+ * @function
+ * @param {Object} item - The item to create a div for.
+ * @returns {HTMLDivElement} The created div element.
+ */
 
 function createItemDiv(item) {
   const itemDiv = document.createElement('div');
