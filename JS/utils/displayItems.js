@@ -1,4 +1,4 @@
-fetch('http://10.120.32.92/app/menu')
+fetch('http://127.0.0.1:3000/menu')
   .then(response => {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -17,18 +17,10 @@ fetch('http://10.120.32.92/app/menu')
       categoryDiv.appendChild(categoryTitle);
 
       if (category === 'Juomat') {
-        for (const subCategory in data.menu[category]) {
-          const subCategoryDiv = document.createElement('div');
-          subCategoryDiv.className = subCategory.toLowerCase();
-          const subCategoryTitle = document.createElement('h2');
-          subCategoryTitle.textContent = subCategory;
-          subCategoryDiv.appendChild(subCategoryTitle);
-          data.menu[category][subCategory].forEach(item => {
-            const itemDiv = createItemDiv(item);
-            subCategoryDiv.appendChild(itemDiv);
-          });
-          categoryDiv.appendChild(subCategoryDiv);
-        }
+        data.menu[category].forEach(item => {
+          const itemDiv = createItemDiv(item);
+          categoryDiv.appendChild(itemDiv);
+        });
       } else {
         data.menu[category].forEach(item => {
           const itemDiv = createItemDiv(item);
