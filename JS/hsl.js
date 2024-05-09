@@ -79,8 +79,7 @@ async function getBikeStations() {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const bikeStations = await response.json();
-    //console.log("Bikestations",bikeStations);
-    return bikeStations
+    return bikeStations;
   } catch (error) {
     console.error('There was a problem with the fetch operation: ', error);
   }
@@ -137,3 +136,4 @@ document.getElementById('show-map-button').addEventListener('click', function() 
     button.innerHTML = 'Avaa Kartta';
   }
 });
+export {getBikeStations, getBikeStationById, addMarkersToMap}
