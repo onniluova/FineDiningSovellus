@@ -4,7 +4,7 @@
  * @param {Event} evt - The event that triggered the function.
  * @param {string} tabName - The name of the tab to open.
  */
-function openTab(evt, tabName) {
+ function openTab(evt, tabName) {
   let i, tabcontent, tablinks;
 
   tabcontent = document.getElementsByClassName("tabcontent");
