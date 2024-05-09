@@ -13,21 +13,21 @@ document.getElementById = jest.fn(id => {
   }
 });
 
-// Mock the console.log function to keep the test output clean
+
 console.log = jest.fn();
 
-// Import the registerUser function
+
 import { registerUser } from '../JS/register';
 
 describe('registerUser', () => {
   it('sends a registration request with the correct data', () => {
-    // Create a mock event
+
     const event = { preventDefault: jest.fn() };
 
-    // Call the function with the mock event
+
     registerUser(event);
 
-    // Check that fetch was called with the correct arguments
+
     expect(fetch).toHaveBeenCalledWith('http://127.0.0.1:3000/register', {
       method: 'POST',
       headers: {
