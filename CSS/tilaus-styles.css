@@ -8,18 +8,13 @@ body {
 
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 }
 
 .container div {
-  flex: 1 0 100%;
-  margin: 10px;
-  padding: 20px;
-  background-color: antiquewhite;
-  border-radius: 5px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fbf5eb;
 }
 
 @media (max-width: 599px) {
@@ -102,8 +97,8 @@ button {
   width: 100%;
   max-width: 200px;
   height: 40px;
-  margin: 20px auto;
-  background-color: #897f6d;
+  margin: 0 auto;
+  background-color: #414be0;
   color: #fff;
   border: none;
   border-radius: 5px;
