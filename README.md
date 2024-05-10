@@ -13,6 +13,7 @@ Linkki sovellukseen: http://10.120.32.92/app/HTML/index.html
 - Jotta sovelluksesta voi tilata tuotteita tai varata pöydän täytyy rekisteröityä ja kirjautua. ​
 - Kirjautuminen ja rekisteröityminen tapahtuu sivun oikeasta yläkulmasta. ​
 - Varauksia ja tilauksia pystyy perumaan kirjautumisen jälkeen.​
+- Admin käyttäjällä on mahdollisuus muokata varauksia ja tilauksia.
 
 # Backend
 - Express.js
