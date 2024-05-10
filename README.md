@@ -21,8 +21,8 @@
 - Dialogi: Dialogi-elementtiä käytetään erilaisten viestien, kuten virheilmoitusten tai vahvistusviestien, näyttämiseen. Se ilmestyy automaattisesti, kun tarvitaan käyttäjän huomiota.​
 - 
 # Backend
-Express.js
-https://github.com/onniluova/FineDiningBackend
+- Express.js
+- https://github.com/onniluova/FineDiningBackend
 
 # Fine Dining Sovellus: Bijou
 
