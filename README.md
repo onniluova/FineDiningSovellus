@@ -1,3 +1,7 @@
+# Fine Dining Sovellus: Bijou
+
+Linkki sovellukseen: http://10.120.32.92/app/HTML/index.html
+
 # Sovelluksen idea ja kohderyhmä
 - Projektin tavoitteena oli luoda käyttäjäystävällinen sekä monipuolinen ravintola aiheinen verkkosivusto. Sivusto on suunniteltu toimimaan kuin todellisen ravintolan verkkosivusto, joka tarjoaa sekä asiakkaalle että verkkosivuston omistajalle mahdollisuuden käyttää sivustoa heidän käyttäjätilansa mukaisesti.​ 
 
@@ -58,10 +62,6 @@ Bijou on hyödyllinen, koska se tarjoaa asiakkaille helpon ja kätevän tavan:
 4. Käytä sovellusta:
 
     Kun sovellus on käynnissä, voit käyttää sitä verkkoselaimessa avaamalla index.html tiedoston.
-
-# Fine Dining Sovellus: Bijou
-
-Linkki sovellukseen: http://10.120.32.92/app/HTML/index.html
    
 # Arviointi
 https://forms.gle/UZfJMu1dDfWDoZ3z8
