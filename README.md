@@ -1,6 +1,21 @@
-# Fine Dining Sovellus: Bijou
+# Sovelluksen idea ja kohderyhmä
+- Projektin tavoitteena oli luoda käyttäjäystävällinen sekä monipuolinen ravintola aiheinen verkkosivusto. Sivusto on suunniteltu toimimaan kuin todellisen ravintolan verkkosivusto, joka tarjoaa sekä asiakkaalle että verkkosivuston omistajalle mahdollisuuden käyttää sivustoa heidän käyttäjätilansa mukaisesti.​ 
 
-Linkki sovellukseen: http://10.120.32.92/app/HTML/index.html
+- Sovellus on suunniteltu esittelemään Fine Dining -ravintolan ainutlaatuisia ja unohtumattomia ruokaelämyksiä. Nämä elämykset alkavat herkullisista alkupaloista ja kulminoituvat kalliisiin ja eksklusiivisiin viineihin. Ravintolan kohderyhmänä ovat varakkaat ihmiset jotka eivät tyydy tavalliseen. ​
+
+# Sovelluksen toiminnallisuudet
+- Sovellus mahdollistaa tilaamisen ravintolasta tilaa sivusta. ​
+- Pöydän varaaminen tapahtuu varaa sivulta. ​
+- Jotta sovelluksesta voi tilata tuotteita tai varata pöydän täytyy rekisteröityä ja kirjautua. ​
+- Kirjautuminen ja rekisteröityminen tapahtuu sivun oikeasta yläkulmasta. ​
+- Varauksia ja tilauksia pystyy perumaan kirjautumisen jälkeen.​
+
+# Backend
+- Express.js
+- https://github.com/onniluova/FineDiningBackend
+
+# Dokumentaatio
+- Front-end JSdocin linkki: [https://users.metropolia.fi/~jannassl/projektinJsDoc/out/]
 
 # Mikä Bijou on?
 
@@ -15,6 +30,16 @@ Bijou on hyödyllinen, koska se tarjoaa asiakkaille helpon ja kätevän tavan:
 - Tilata ruokaa verkossa
 - Saada yhteystietoja ravintolaan
 
+# Sovelluksen ohjeet
+- Etusivu: Kun avaat verkkosivuston, sinut ohjataan etusivulle. Täältä löydät navigointipainikkeet, jotka ohjaavat sinut eri osioihin.  ​
+- Tilaus: Napsauta "Tilaa" -painiketta navigointipalkissa siirtyäksesi tilausosioon. Täällä voit selata ravintolan tarjoamia ruokia ja juomia ja lisätä ne ostoskoriin.  ​
+- Pöydänvaraus: Napsauta "Varaa" -painiketta navigointipalkissa siirtyäksesi pöydänvarausosioon. Täällä voit valita päivämäärän ja ajan, jolloin haluat varata pöydän.  
+- Menu: Napsauta "Menu" -painiketta navigointipalkissa siirtyäksesi menuosioon. Täällä voit tutustua ravintolan tarjoamiin ruokiin ja juomiin.  
+- Meistä: Napsauta "Meistä" -painiketta navigointipalkissa siirtyäksesi tieto-osioon. Täällä voit lukea lisää ravintolasta, sen historiasta ja filosofiasta.  ​
+- Ostoskori: Napsauta ostoskorikuvaketta navigointipalkissa siirtyäksesi ostoskoriin. Täällä voit tarkastella tekemiäsi tilauksia ennen niiden lähettämistä ravintolaan.  ​
+- Kirjautuminen ja rekisteröinti: Napsauta "Kirjaudu" tai "Rekisteröidy" -painiketta navigointipalkissa siirtyäksesi kirjautumis- tai rekisteröintisivulle. Täällä voit luoda uuden tilin tai kirjautua sisään olemassa olevalla tilillä.  
+- Dialogi: Dialogi-elementtiä käytetään erilaisten viestien, kuten virheilmoitusten tai vahvistusviestien, näyttämiseen. Se ilmestyy automaattisesti, kun tarvitaan käyttäjän huomiota.​
+  
 # Kuinka voit kokeilla Bijouta omalla koneellasi:
 
 1. Kloonaa sovelluksen lähdekoodi:
@@ -33,5 +58,12 @@ Bijou on hyödyllinen, koska se tarjoaa asiakkaille helpon ja kätevän tavan:
 
     Kun sovellus on käynnissä, voit käyttää sitä verkkoselaimessa avaamalla index.html tiedoston.
 
+# Fine Dining Sovellus: Bijou
 
-Front-end JSdocin linkki: [https://users.metropolia.fi/~jannassl/projektinJsDoc/out/]
+Linkki sovellukseen: http://10.120.32.92/app/HTML/index.html
+   
+# Arviointi
+https://forms.gle/UZfJMu1dDfWDoZ3z8
+
+# Tekijät
+Ilmari Elomaa, Onni Luova ja Jan Nässling
