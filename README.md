@@ -10,16 +10,6 @@
 - Kirjautuminen ja rekisteröityminen tapahtuu sivun oikeasta yläkulmasta. ​
 - Varauksia ja tilauksia pystyy perumaan kirjautumisen jälkeen.​
 
-# Sovelluksen ohjeet
-- Etusivu: Kun avaat verkkosivuston, sinut ohjataan etusivulle. Täältä löydät navigointipainikkeet, jotka ohjaavat sinut eri osioihin.  ​
-- Tilaus: Napsauta "Tilaa" -painiketta navigointipalkissa siirtyäksesi tilausosioon. Täällä voit selata ravintolan tarjoamia ruokia ja juomia ja lisätä ne ostoskoriin.  ​
-- Pöydänvaraus: Napsauta "Varaa" -painiketta navigointipalkissa siirtyäksesi pöydänvarausosioon. Täällä voit valita päivämäärän ja ajan, jolloin haluat varata pöydän.  
-- Menu: Napsauta "Menu" -painiketta navigointipalkissa siirtyäksesi menuosioon. Täällä voit tutustua ravintolan tarjoamiin ruokiin ja juomiin.  
-- Meistä: Napsauta "Meistä" -painiketta navigointipalkissa siirtyäksesi tieto-osioon. Täällä voit lukea lisää ravintolasta, sen historiasta ja filosofiasta.  ​
-- Ostoskori: Napsauta ostoskorikuvaketta navigointipalkissa siirtyäksesi ostoskoriin. Täällä voit tarkastella tekemiäsi tilauksia ennen niiden lähettämistä ravintolaan.  ​
-- Kirjautuminen ja rekisteröinti: Napsauta "Kirjaudu" tai "Rekisteröidy" -painiketta navigointipalkissa siirtyäksesi kirjautumis- tai rekisteröintisivulle. Täällä voit luoda uuden tilin tai kirjautua sisään olemassa olevalla tilillä.  
-- Dialogi: Dialogi-elementtiä käytetään erilaisten viestien, kuten virheilmoitusten tai vahvistusviestien, näyttämiseen. Se ilmestyy automaattisesti, kun tarvitaan käyttäjän huomiota.​
-- 
 # Backend
 - Express.js
 - https://github.com/onniluova/FineDiningBackend
@@ -40,6 +30,16 @@ Bijou on hyödyllinen, koska se tarjoaa asiakkaille helpon ja kätevän tavan:
 - Tilata ruokaa verkossa
 - Saada yhteystietoja ravintolaan
 
+# Sovelluksen ohjeet
+- Etusivu: Kun avaat verkkosivuston, sinut ohjataan etusivulle. Täältä löydät navigointipainikkeet, jotka ohjaavat sinut eri osioihin.  ​
+- Tilaus: Napsauta "Tilaa" -painiketta navigointipalkissa siirtyäksesi tilausosioon. Täällä voit selata ravintolan tarjoamia ruokia ja juomia ja lisätä ne ostoskoriin.  ​
+- Pöydänvaraus: Napsauta "Varaa" -painiketta navigointipalkissa siirtyäksesi pöydänvarausosioon. Täällä voit valita päivämäärän ja ajan, jolloin haluat varata pöydän.  
+- Menu: Napsauta "Menu" -painiketta navigointipalkissa siirtyäksesi menuosioon. Täällä voit tutustua ravintolan tarjoamiin ruokiin ja juomiin.  
+- Meistä: Napsauta "Meistä" -painiketta navigointipalkissa siirtyäksesi tieto-osioon. Täällä voit lukea lisää ravintolasta, sen historiasta ja filosofiasta.  ​
+- Ostoskori: Napsauta ostoskorikuvaketta navigointipalkissa siirtyäksesi ostoskoriin. Täällä voit tarkastella tekemiäsi tilauksia ennen niiden lähettämistä ravintolaan.  ​
+- Kirjautuminen ja rekisteröinti: Napsauta "Kirjaudu" tai "Rekisteröidy" -painiketta navigointipalkissa siirtyäksesi kirjautumis- tai rekisteröintisivulle. Täällä voit luoda uuden tilin tai kirjautua sisään olemassa olevalla tilillä.  
+- Dialogi: Dialogi-elementtiä käytetään erilaisten viestien, kuten virheilmoitusten tai vahvistusviestien, näyttämiseen. Se ilmestyy automaattisesti, kun tarvitaan käyttäjän huomiota.​
+  
 # Kuinka voit kokeilla Bijouta omalla koneellasi:
 
 1. Kloonaa sovelluksen lähdekoodi:
