@@ -25,7 +25,7 @@
 - https://github.com/onniluova/FineDiningBackend
 
 # Dokumentaatio
-_ Front-end JSdocin linkki: [https://users.metropolia.fi/~jannassl/projektinJsDoc/out/]
+- Front-end JSdocin linkki: [https://users.metropolia.fi/~jannassl/projektinJsDoc/out/]
 
 # Mikä Bijou on?
 
