@@ -65,4 +65,5 @@ Linkki sovellukseen: http://10.120.32.92/app/HTML/index.html
 # Arviointi
 https://forms.gle/UZfJMu1dDfWDoZ3z8
 
-
+# Tekijät
+Ilmari Elomaa, Onni Luova ja Jan Nässling
