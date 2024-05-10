@@ -24,9 +24,8 @@
 - Express.js
 - https://github.com/onniluova/FineDiningBackend
 
-# Fine Dining Sovellus: Bijou
-
-Linkki sovellukseen: http://10.120.32.92/app/HTML/index.html
+# Dokumentaatio
+_ Front-end JSdocin linkki: [https://users.metropolia.fi/~jannassl/projektinJsDoc/out/]
 
 # Mikä Bijou on?
 
@@ -58,8 +57,12 @@ Bijou on hyödyllinen, koska se tarjoaa asiakkaille helpon ja kätevän tavan:
 4. Käytä sovellusta:
 
     Kun sovellus on käynnissä, voit käyttää sitä verkkoselaimessa avaamalla index.html tiedoston.
+
+# Fine Dining Sovellus: Bijou
+
+Linkki sovellukseen: http://10.120.32.92/app/HTML/index.html
    
 # Arviointi
 https://forms.gle/UZfJMu1dDfWDoZ3z8
 
-Front-end JSdocin linkki: [https://users.metropolia.fi/~jannassl/projektinJsDoc/out/]
+
