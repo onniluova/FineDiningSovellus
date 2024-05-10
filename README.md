@@ -39,6 +39,7 @@ Bijou on hyödyllinen, koska se tarjoaa asiakkaille helpon ja kätevän tavan:
 - Ostoskori: Napsauta ostoskorikuvaketta navigointipalkissa siirtyäksesi ostoskoriin. Täällä voit tarkastella tekemiäsi tilauksia ennen niiden lähettämistä ravintolaan.  ​
 - Kirjautuminen ja rekisteröinti: Napsauta "Kirjaudu" tai "Rekisteröidy" -painiketta navigointipalkissa siirtyäksesi kirjautumis- tai rekisteröintisivulle. Täällä voit luoda uuden tilin tai kirjautua sisään olemassa olevalla tilillä.  
 - Dialogi: Dialogi-elementtiä käytetään erilaisten viestien, kuten virheilmoitusten tai vahvistusviestien, näyttämiseen. Se ilmestyy automaattisesti, kun tarvitaan käyttäjän huomiota.​
+- Admin toiminnot: kirjaudu sisään näillä tunnareilla: säköposti: testiadmin@admin.com ja salasana: testadmin123
   
 # Kuinka voit kokeilla Bijouta omalla koneellasi:
 
