@@ -1,5 +1,5 @@
 .menu-item {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .slide-in-content {
@@ -30,4 +30,9 @@
   color: whitesmoke;
   background-color: #09133b;
   font-size: 18px
+}
+
+.juomat {
+  max-height: 500px;
+  overflow-y: auto;
 }
