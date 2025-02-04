@@ -1,6 +1,12 @@
 # Fine Dining Sovellus: Bijou
 
-Linkki sovellukseen: http://10.120.32.92/app/HTML/index.html
+![image](https://github.com/user-attachments/assets/3ea3f047-f35d-4d31-b971-70b3b061f4d6)
+
+![image](https://github.com/user-attachments/assets/9f1dfb79-9dde-449a-a73d-cc8a7c35e039)
+
+![image](https://github.com/user-attachments/assets/6a487974-31ec-4cf8-89f4-0a3bc1646691)
+
+
 
 # Sovelluksen idea ja kohderyhmä
 - Projektin tavoitteena oli luoda käyttäjäystävällinen sekä monipuolinen ravintola aiheinen verkkosivusto. Sivusto on suunniteltu toimimaan kuin todellisen ravintolan verkkosivusto, joka tarjoaa sekä asiakkaalle että verkkosivuston omistajalle mahdollisuuden käyttää sivustoa heidän käyttäjätilansa mukaisesti.​ 
@@ -16,7 +22,7 @@ Linkki sovellukseen: http://10.120.32.92/app/HTML/index.html
 - Admin käyttäjällä on mahdollisuus muokata varauksia ja tilauksia.
 
 # Backend
-- Express.js
+- Node.js
 - https://github.com/onniluova/FineDiningBackend
 
 # Dokumentaatio
