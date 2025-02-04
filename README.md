@@ -37,53 +37,58 @@ This application showcases the unique and unforgettable fine dining experience, 
 - Node.js
 - https://github.com/onniluova/FineDiningBackend
 
-# Dokumentaatio
-- Front-end JSdocin linkki: [https://users.metropolia.fi/~jannassl/projektinJsDoc/out/]
+# Documentation
+- Frontend JSdoc: [https://users.metropolia.fi/~jannassl/projektinJsDoc/out/]
 
-# Mikä Bijou on?
+# What is Bijou?
 
-Bijou on fiktiivinen fine dining -ravintola, jolla on verkkosivusto. Sivustolla on tietoa ravintolasta, sen tarjoamista palveluista ja mahdollisuus tehdä pöytävarauksia ja tilata ruokaa verkossa.
+Bijou is a fictional fine dining restaurant with a fully functional website. The site provides information about the restaurant, its services, and allows users to make table reservations and order food online.
 
-# Miksi Bijou on hyödyllinen?
+# Why is Bijou Useful?
 
-Bijou on hyödyllinen, koska se tarjoaa asiakkaille helpon ja kätevän tavan:
+- Bijou provides customers with a seamless and convenient way to:
 
-- Tutustua ravintolaan ja sen tarjoamiin palveluihin
-- Tehdä pöytävarauksia ravintolaan
-- Tilata ruokaa verkossa
-- Saada yhteystietoja ravintolaan
+- Explore the restaurant and its offerings
 
-# Sovelluksen ohjeet
-- Etusivu: Kun avaat verkkosivuston, sinut ohjataan etusivulle. Täältä löydät navigointipainikkeet, jotka ohjaavat sinut eri osioihin.  ​
-- Tilaus: Napsauta "Tilaa" -painiketta navigointipalkissa siirtyäksesi tilausosioon. Täällä voit selata ravintolan tarjoamia ruokia ja juomia ja lisätä ne ostoskoriin.  ​
-- Pöydänvaraus: Napsauta "Varaa" -painiketta navigointipalkissa siirtyäksesi pöydänvarausosioon. Täällä voit valita päivämäärän ja ajan, jolloin haluat varata pöydän.  
-- Menu: Napsauta "Menu" -painiketta navigointipalkissa siirtyäksesi menuosioon. Täällä voit tutustua ravintolan tarjoamiin ruokiin ja juomiin.  
-- Meistä: Napsauta "Meistä" -painiketta navigointipalkissa siirtyäksesi tieto-osioon. Täällä voit lukea lisää ravintolasta, sen historiasta ja filosofiasta.  ​
-- Ostoskori: Napsauta ostoskorikuvaketta navigointipalkissa siirtyäksesi ostoskoriin. Täällä voit tarkastella tekemiäsi tilauksia ennen niiden lähettämistä ravintolaan.  ​
-- Kirjautuminen ja rekisteröinti: Napsauta "Kirjaudu" tai "Rekisteröidy" -painiketta navigointipalkissa siirtyäksesi kirjautumis- tai rekisteröintisivulle. Täällä voit luoda uuden tilin tai kirjautua sisään olemassa olevalla tilillä.  
-- Dialogi: Dialogi-elementtiä käytetään erilaisten viestien, kuten virheilmoitusten tai vahvistusviestien, näyttämiseen. Se ilmestyy automaattisesti, kun tarvitaan käyttäjän huomiota.​
-- Admin toiminnot: kirjaudu sisään näillä tunnareilla: säköposti: testiadmin@admin.com ja salasana: testadmin123
+- Make table reservations
+
+- Order food online
+
+- Access contact details of the restaurant
+
+# User Guide
+
+- Homepage: The landing page provides navigation buttons directing users to different sections of the site.
+
+- Ordering: Click the "Order" button in the navigation bar to browse the restaurant’s menu and add items to your cart.
+
+- Table Reservations: Click "Reserve" to book a table by selecting a preferred date and time.
+
+- Menu: Click "Menu" to explore the available food and beverage options.
+
+- About Us: Click "About Us" to read more about the restaurant’s history and philosophy.
+
+- Cart: Click the cart icon in the navigation bar to review your selected items before placing an order.
+
+- Login & Registration: Click "Login" or "Register" to access your account.
+
+- Dialogs: The application uses dialog boxes for error messages and confirmations that require user attention.
+
+- Admin Features: Admin users can log in using the following credentials:
+
+  - Email: testiadmin@admin.com
+
+  - Password: testadmin123
   
-# Kuinka voit kokeilla Bijouta omalla koneellasi:
+# How to Run Bijou Locally
 
-1. Kloonaa sovelluksen lähdekoodi:
+1. Clone the repository:Use Git to clone the source code to your local machine. Note that both the frontend and backend must be cloned. The backend repository can be found here.
 
-    Käytä Git-komentoa kloonaamaan sovelluksen lähdekoodi paikalliselle koneellesi. HUOM! Sinun täytyy kopioida front- ja backend. Backendin linkki: https://github.com/onniluova/FineDiningBackend
+2. Install dependencies:Run npm i in the backend directory to install the necessary Node.js dependencies.
 
-2. Asenna tarvittavat riippuvuudet:
+3. Start the application:Execute npm run dev to launch the local server.
 
-    Sovelluksen asentamiseen ja suorittamiseen tarvitset tiettyjä kehitystyökaluja ja kirjastoja. Aja backendissa komento npm i, joka asentaa tarvittavat Node.js kirjastot.
-
-3. Käynnistä sovellus:
-
-    Tämän jälkeen voit ajaa komennon npm run dev, joka käynnistää palvelimen lokaalisti.
-
-4. Käytä sovellusta:
-
-    Kun sovellus on käynnissä, voit käyttää sitä verkkoselaimessa avaamalla index.html tiedoston.
+4. Access the application:Once the server is running, open the index.html file in a web browser.
    
-# Arviointi
-https://forms.gle/UZfJMu1dDfWDoZ3z8
-
 # Tekijät
-Ilmari Elomaa, Onni Luova ja Jan Nässling
+Onni Luova, Jan Nässling ja Ilmari Elomaa
