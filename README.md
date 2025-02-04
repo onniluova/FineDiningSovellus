@@ -90,5 +90,5 @@ Bijou is a fictional fine dining restaurant with a fully functional website. The
 
 4. Access the application:Once the server is running, open the index.html file in a web browser.
    
-# Tekijät
+# Developers
 Onni Luova, Jan Nässling ja Ilmari Elomaa
