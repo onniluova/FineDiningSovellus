@@ -74,7 +74,7 @@ Bijou is a fictional fine dining restaurant with a fully functional website. The
 
 - Dialogs: The application uses dialog boxes for error messages and confirmations that require user attention.
 
-- Admin Features: Admin users can log in using the following credentials:
+- Test admin features: Admin users can log in using the following credentials:
 
   - Email: testiadmin@admin.com
 
