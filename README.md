@@ -1,25 +1,37 @@
-# Fine Dining Sovellus: Bijou
+# Fine Dining Application: Bijou
 
+## Frontpage
 ![image](https://github.com/user-attachments/assets/3ea3f047-f35d-4d31-b971-70b3b061f4d6)
 
+## 
 ![image](https://github.com/user-attachments/assets/9f1dfb79-9dde-449a-a73d-cc8a7c35e039)
 
+##
 ![image](https://github.com/user-attachments/assets/6a487974-31ec-4cf8-89f4-0a3bc1646691)
 
+## Admin panel
+![image](https://github.com/user-attachments/assets/d48b8505-a0d4-431f-b81c-1569a30ac4af)
 
 
-# Sovelluksen idea ja kohderyhmä
-- Projektin tavoitteena oli luoda käyttäjäystävällinen sekä monipuolinen ravintola aiheinen verkkosivusto. Sivusto on suunniteltu toimimaan kuin todellisen ravintolan verkkosivusto, joka tarjoaa sekä asiakkaalle että verkkosivuston omistajalle mahdollisuuden käyttää sivustoa heidän käyttäjätilansa mukaisesti.​ 
+# Concept and Target Audience
 
-- Sovellus on suunniteltu esittelemään Fine Dining -ravintolan ainutlaatuisia ja unohtumattomia ruokaelämyksiä. Nämä elämykset alkavat herkullisista alkupaloista ja kulminoituvat kalliisiin ja eksklusiivisiin viineihin. Ravintolan kohderyhmänä ovat varakkaat ihmiset jotka eivät tyydy tavalliseen. ​
+The goal of this project was to create a user-friendly and versatile restaurant-themed website. The site is designed to function like a real restaurant website, providing both customers and administrators with access to relevant features based on their user roles.
 
-# Sovelluksen toiminnallisuudet
-- Sovellus mahdollistaa tilaamisen ravintolasta tilaa sivusta. ​
-- Pöydän varaaminen tapahtuu varaa sivulta. ​
-- Jotta sovelluksesta voi tilata tuotteita tai varata pöydän täytyy rekisteröityä ja kirjautua. ​
-- Kirjautuminen ja rekisteröityminen tapahtuu sivun oikeasta yläkulmasta. ​
-- Varauksia ja tilauksia pystyy perumaan kirjautumisen jälkeen.​
-- Admin käyttäjällä on mahdollisuus muokata varauksia ja tilauksia.
+This application showcases the unique and unforgettable fine dining experience, featuring gourmet appetizers and culminating in luxurious, exclusive wines. The target audience consists of affluent individuals who seek premium dining experiences beyond the ordinary.
+
+# Features
+
+- Users can place food orders through the "Order" section.
+
+- Table reservations can be made via the "Reserve" section.
+
+- To place an order or reserve a table, users must register and log in.
+
+- Login and registration options are available in the top-right corner of the site.
+
+- Logged-in users can cancel their reservations and orders if needed.
+
+- Admin users have the ability to modify reservations and orders.
 
 # Backend
 - Node.js
