@@ -1,5 +1,7 @@
 # Fine Dining Application: Bijou
 
+Backend: https://github.com/onniluova/FineDiningBackend
+
 ## Frontpage
 ![image](https://github.com/user-attachments/assets/3ea3f047-f35d-4d31-b971-70b3b061f4d6)
 
