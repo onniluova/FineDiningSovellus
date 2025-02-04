@@ -3,10 +3,10 @@
 ## Frontpage
 ![image](https://github.com/user-attachments/assets/3ea3f047-f35d-4d31-b971-70b3b061f4d6)
 
-## 
+## Login
 ![image](https://github.com/user-attachments/assets/9f1dfb79-9dde-449a-a73d-cc8a7c35e039)
 
-##
+## 
 ![image](https://github.com/user-attachments/assets/6a487974-31ec-4cf8-89f4-0a3bc1646691)
 
 ## Admin panel
